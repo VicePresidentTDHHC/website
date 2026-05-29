@@ -231,6 +231,12 @@ h3 {
   font-size: 1.25rem;
   color: var(--color-muted);
   max-width: 42rem;
+  font-weight: 500;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--color-text);
 }
 
 .hero {
@@ -451,38 +457,12 @@ h3 {
 }
 
 .site-footer {
-  background: var(--color-footer-bg);
-  color: var(--color-footer-text);
-  padding: 2.5rem 1.25rem;
   margin-top: 3rem;
+  padding: 0;
+  background: transparent;
 }
 
-.site-footer a {
-  color: var(--color-footer-link);
-}
-
-.footer__inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  gap: 2rem;
-}
-
-.footer__inner h2 {
-  color: var(--color-footer-heading);
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-.footer__bottom {
-  max-width: var(--max-width);
-  margin: 2rem auto 0;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--color-footer-divider);
-  font-size: 0.9rem;
-  text-align: center;
-}
+/* Footer layout: see footer-curve.css */
 
 details {
   border: 1px solid var(--color-border);
