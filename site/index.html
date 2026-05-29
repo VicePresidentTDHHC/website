@@ -10,9 +10,9 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-    <div class="preview-banner">
+  <div class="preview-banner">
     <div class="preview-banner__inner">
-      <p class="preview-banner__text">Board preview ? switch looks below. Not the live site.</p>
+      <p class="preview-banner__text">Board preview &mdash; switch looks below. Not the live site.</p>
       <div class="theme-picker" role="group" aria-label="Visual theme">
         <span class="theme-picker__label">Look:</span>
         <button type="button" class="theme-picker__btn" data-set-theme="v1">V1 Teal</button>
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-<div class="contact-bar">
+  <div class="contact-bar">
     <div class="contact-bar__inner">
       <span>Video Phone: <a href="tel:+19032062210">(903) 206-2210</a></span>
       <span>Voice: <a href="tel:+19036176204">(903) 617-6204</a></span>
@@ -59,20 +59,26 @@
     </div>
   </section>
 
-  <main id="main">
+  <div class="wave-divider" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40L48,45.3C96,51,192,61,288,64C384,67,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32V80H0Z" fill="var(--color-bg)"/>
+    </svg>
+  </div>
+
+  <main id="main" class="section--lift has-blob-bg">
     <div class="container">
-      <div class="card-grid">
-        <article class="card">
+      <div class="card-grid card-grid--overlap">
+        <article class="card card--float">
           <h2>Our Services</h2>
           <p>Interpreter services for businesses and organizations, caseworker advocacy, literacy and community programs, and events.</p>
           <p><a href="services/interpreters.html">View services</a></p>
         </article>
-        <article class="card">
+        <article class="card card--float">
           <h2>Resources</h2>
           <p>Curated links, places of worship with interpreted or ASL services, and interpreter training information.</p>
           <p><a href="resources/index.html">Browse resources</a></p>
         </article>
-        <article class="card">
+        <article class="card card--float">
           <h2>Support Us</h2>
           <p>TDHHC is a 501(c)(3) nonprofit. Donate, volunteer, or subscribe to community updates.</p>
           <p><a href="support/donate.html">Support TDHHC</a></p>
@@ -93,18 +99,29 @@
         </li>
       </ul>
       <p class="notice notice--info">Event listings are sample content for this mock-up. Staff will manage events on the production site.</p>
-
-      <h2>Request interpreter services</h2>
-      <p>Businesses and organizations â?? not individual clients â?? request certified interpreters through TDHHC. Entities arrange appointments and are billed monthly.</p>
-      <p><a class="btn btn--primary" href="services/interpreters.html#request">Request an Interpreter</a></p>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer__inner">
+  <div class="wave-divider wave-divider--flip" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40L48,45.3C96,51,192,61,288,64C384,67,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32V80H0Z" fill="var(--color-band)"/>
+    </svg>
+  </div>
+  <section class="site-band" aria-label="Tyler Deaf and Hard of Hearing Center">
+    <div class="band-cta">
+      <div class="container">
+        <h2>Request interpreter services</h2>
+        <p class="lead">Businesses and organizations&#8212;not individual clients&#8212;request certified interpreters through TDHHC. Entities arrange appointments and are billed monthly.</p>
+        <p><a class="btn btn--primary" href="services/interpreters.html#request">Request an Interpreter</a></p>
+      </div>
+    </div>
+    <div class="site-band__grid">
+      <div class="logo">
+        <img src="assets/logo.png" alt="" width="392" height="245">
+      </div>
       <div>
         <h2>Tyler Deaf and Hard of Hearing Center</h2>
-        <p>501(c)(3) nonprofit Â· Serving East Texas since 2012</p>
+        <p>501(c)(3) nonprofit &middot; Serving East Texas since 2012</p>
       </div>
       <div>
         <h2>Visit</h2>
@@ -118,8 +135,8 @@
         <p><a href="mailto:coordinator@tdhhc.org">coordinator@tdhhc.org</a></p>
       </div>
     </div>
-    <p class="footer__bottom">Â© Tyler Deaf and Hard of Hearing Center Â· Board preview mock-up</p>
-  </footer>
+    <p class="site-band__bottom">&copy; Tyler Deaf and Hard of Hearing Center &middot; Board preview mock-up</p>
+  </section>
   <script src="js/theme.js"></script>
   <script src="js/main.js"></script>
 </body>

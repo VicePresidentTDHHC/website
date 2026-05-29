@@ -61,7 +61,20 @@
   --card-border: 2px solid #e7e5e4;
   --radius: 0.5rem;
   --shadow: 0 4px 20px rgba(28, 25, 23, 0.06);
+  --shadow-lg: 0 12px 40px rgba(28, 25, 23, 0.1);
   --logo-height: 4.5rem;
+
+  /* Soft rosewood nod to legacy brand (#d7282f) — bands only */
+  --color-band: #9b5a5c;
+  --color-band-soft: #d4a5a7;
+  --color-band-text: #fff8f7;
+  --color-band-heading: #ffffff;
+  --color-band-link: #ccfbf1;
+  --color-band-divider: rgba(255, 255, 255, 0.22);
+  --color-band-btn-bg: #0f766e;
+  --color-band-btn-text: #ffffff;
+  --color-band-btn-hover: #0d5c56;
+  --band-logo-filter: brightness(1.05);
 }
 
 /* ═══════════════════════════════════════════
@@ -116,7 +129,19 @@
   --card-border: none;
   --radius: 0.75rem;
   --shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 16px 48px rgba(15, 23, 42, 0.14);
   --logo-height: 4rem;
+
+  --color-band: #6b3a45;
+  --color-band-soft: #9e5a6a;
+  --color-band-text: #fce8ec;
+  --color-band-heading: #fde68a;
+  --color-band-link: #fcd34d;
+  --color-band-divider: rgba(255, 255, 255, 0.15);
+  --color-band-btn-bg: #f59e0b;
+  --color-band-btn-text: #1e293b;
+  --color-band-btn-hover: #d97706;
+  --band-logo-filter: brightness(1.1);
 }
 
 [data-theme="v2"] .card {
@@ -184,7 +209,19 @@
   --card-border: 1px solid #c4d4bc;
   --radius: 0.25rem;
   --shadow: 0 2px 8px rgba(27, 67, 50, 0.08);
+  --shadow-lg: 0 10px 32px rgba(27, 67, 50, 0.12);
   --logo-height: 4.25rem;
+
+  --color-band: #a67c6b;
+  --color-band-soft: #c9a99a;
+  --color-band-text: #fffaf5;
+  --color-band-heading: #ffffff;
+  --color-band-link: #d8f3dc;
+  --color-band-divider: rgba(255, 255, 255, 0.2);
+  --color-band-btn-bg: #1b4332;
+  --color-band-btn-text: #ffffff;
+  --color-band-btn-hover: #2d6a4f;
+  --band-logo-filter: none;
 }
 
 [data-theme="v3"] .hero {

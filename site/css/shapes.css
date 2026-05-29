@@ -1,0 +1,177 @@
+/* Curved waves & color bands (Divi-inspired shape, theme-driven color) */
+
+.wave-divider {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: clamp(3rem, 8vw, 5.5rem);
+}
+
+.wave-divider--flip svg {
+  transform: scaleY(-1);
+}
+
+/* Pull cards up over the hero wave */
+.section--lift {
+  position: relative;
+  z-index: 2;
+  margin-top: -2.5rem;
+}
+
+.card-grid--overlap {
+  margin-top: 0;
+}
+
+/* Colored band (footer or CTA) — soft brand nod, not alert red */
+.site-band {
+  background: var(--color-band);
+  color: var(--color-band-text);
+  padding: 2.5rem 1.25rem 3rem;
+  position: relative;
+}
+
+.site-band a {
+  color: var(--color-band-link);
+}
+
+.site-band h2 {
+  color: var(--color-band-heading);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.site-band .logo img {
+  height: 5rem;
+  filter: var(--band-logo-filter, none);
+}
+
+.site-band__grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.site-band__bottom {
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-band-divider);
+  font-size: 0.9rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* Mid-page CTA inside or above band */
+.band-cta {
+  background: var(--color-band);
+  color: var(--color-band-text);
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  position: relative;
+}
+
+.site-band .band-cta {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-band-divider);
+  margin-bottom: 2rem;
+}
+
+.band-cta h2 {
+  color: var(--color-band-heading);
+  margin-top: 0;
+}
+
+.band-cta .lead {
+  color: var(--color-band-text);
+  opacity: 0.92;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.band-cta .btn--primary {
+  background: var(--color-band-btn-bg);
+  color: var(--color-band-btn-text);
+}
+
+.band-cta .btn--primary:hover {
+  background: var(--color-band-btn-hover);
+  color: var(--color-band-btn-text);
+}
+
+/* Page header band for inner pages (no full hero) */
+.page-hero {
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  padding: 2.5rem 1.25rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay);
+  pointer-events: none;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.page-hero h1 {
+  margin-bottom: 0.5rem;
+}
+
+.page-hero .lead {
+  color: var(--hero-lead);
+  margin-bottom: 0;
+}
+
+/* Decorative blob behind cards (subtle) */
+.has-blob-bg {
+  position: relative;
+}
+
+.has-blob-bg::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: min(50vw, 28rem);
+  height: min(50vw, 28rem);
+  background: var(--color-band-soft);
+  opacity: 0.35;
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.has-blob-bg > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.card--float {
+  transform: translateY(0);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card--float:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg, var(--shadow));
+}
