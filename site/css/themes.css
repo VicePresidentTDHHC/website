@@ -91,11 +91,11 @@
   --color-surface: #eef2f7;
   --color-card-bg: #ffffff;
 
-  --color-accent: #b45309;
-  --color-accent-hover: #92400e;
+  --color-accent: #0f172a;
+  --color-accent-hover: #1e3a5f;
   --color-accent-text: #ffffff;
 
-  /* Links: blue (not amber/red-orange) — accent is for buttons only */
+  /* Links: blue — accent is navy/gold buttons */
   --color-link: #1d4ed8;
   --color-link-hover: #1e3a8a;
   --color-nav-accent: #1d4ed8;
@@ -141,7 +141,17 @@
 }
 
 [data-theme="v2"] .card {
-  border-top: 4px solid var(--color-accent);
+  border-top: 4px solid var(--color-chrome);
+}
+
+[data-theme="v2"] .hero .btn--primary {
+  background: #fbbf24;
+  color: #0f172a;
+}
+
+[data-theme="v2"] .hero .btn--primary:hover {
+  background: #fde68a;
+  color: #0f172a;
 }
 
 [data-theme="v2"] .hero h1 {

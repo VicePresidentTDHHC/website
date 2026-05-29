@@ -16,7 +16,7 @@ Themes are **CSS-only** — swap with the **Look:** buttons in the preview banne
 | Theme | Chrome | Links | Buttons (accent) |
 |-------|--------|-------|------------------|
 | **V1 Slate** | `#2d2a28` | Teal `#0c5c6e` | Teal |
-| **V2 Navy** | `#0f172a` | Blue `#1d4ed8` | Amber (buttons only) |
+| **V2 Navy** | `#0f172a` | Blue `#1d4ed8` | Navy buttons; gold on hero |
 | **V3 Wine** | `#58181f` | Blue `#1e40af` | Romantic `#BD2734` |
 
 Wine footer/contact links on chrome: white text, gold link color `#fde68a`.
