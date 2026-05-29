@@ -4,14 +4,18 @@ Project workspace for rebuilding [tdhhc.org](https://tdhhc.org/) — the Tyler D
 
 ## Contents
 
-- [`archive/`](archive/) — Snapshot of the live site (May 2026) before migration
-- [`docs/REDESIGN-PROPOSAL.md`](docs/REDESIGN-PROPOSAL.md) — Unified redesign plan (user intent, IA, pages, accessibility, migration)
-- [`docs/SITEMAP-AND-CONTENT.md`](docs/SITEMAP-AND-CONTENT.md) — Sitemap, content decisions, and build brief
-- [`docs/PAGE-BY-PAGE-PLAN.md`](docs/PAGE-BY-PAGE-PLAN.md) — Detailed page plan merged from HTML audit + redesign docs (with agree/disagree notes)
-- [`docs/CONTENT-VOICE.md`](docs/CONTENT-VOICE.md) — Voice and tone: no patronizing language
+| Path | What it is |
+|------|------------|
+| [`www/`](www/) | **Current website** — board preview mock-up; deploy this folder |
+| [`archive/`](archive/) | Original WordPress site snapshot (May 2026) — HTML, logos, metadata only |
+| [`content/`](content/) | WordPress content exports (markdown) used when writing new copy |
+| [`reference/`](reference/) | Extracted Divi CSS and other build references |
+| [`docs/`](docs/) | Redesign plans, sitemap, voice guidelines |
+
+Key docs: [`docs/REDESIGN-PROPOSAL.md`](docs/REDESIGN-PROPOSAL.md) · [`docs/SITEMAP-AND-CONTENT.md`](docs/SITEMAP-AND-CONTENT.md) · [`docs/PAGE-BY-PAGE-PLAN.md`](docs/PAGE-BY-PAGE-PLAN.md)
 
 ## Status
 
-Phase 2 in progress: **board preview mock-up** in [`site/`](site/) — open `site/index.html` or run `python -m http.server 8080` in `site/`.
+**Board preview** in [`www/`](www/) — open `www/index.html` or run `python -m http.server 8080` inside `www/`.
 
-Planning docs: [`docs/REDESIGN-PROPOSAL.md`](docs/REDESIGN-PROPOSAL.md) · [`docs/PAGE-BY-PAGE-PLAN.md`](docs/PAGE-BY-PAGE-PLAN.md)
+Netlify/Cloudflare: publish directory is `www` (see `netlify.toml`).

@@ -24,7 +24,7 @@ Wine footer/contact links on chrome: white text, gold link color `#fde68a`.
 ## Files
 
 ```
-site/css/themes.css       — tokens including --color-link
-site/css/footer-curve.css — SVG curve (all themes)
-site/assets/footer-curve.svg
+www/css/themes.css       — tokens including --color-link
+www/css/footer-curve.css — SVG curve (all themes)
+www/assets/footer-curve.svg
 ```

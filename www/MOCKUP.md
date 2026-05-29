@@ -15,20 +15,20 @@ True red is reserved for alerts only — accents are teal, amber, or forest gree
 ## View locally
 
 ```powershell
-cd site
+cd www
 python -m http.server 8080
 ```
 
 Open [http://localhost:8080](http://localhost:8080)
 
-Or open `site/index.html` directly in a browser (relative links work).
+Or open `www/index.html` directly in a browser (relative links work).
 
 ## Deploy for board (free)
 
 Push to GitHub and connect **Netlify** or **Cloudflare Pages**:
 
 - **Build command:** (none)
-- **Publish directory:** `site`
+- **Publish directory:** `www`
 
 The repo includes `netlify.toml` for one-click Netlify deploy.
 

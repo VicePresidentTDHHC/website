@@ -378,4 +378,4 @@ Check off before development starts:
 
 ---
 
-*Last updated: May 29, 2026. Archive source: `archive/raw/`.*
+*Last updated: May 29, 2026. Original HTML: `archive/raw/`. Content exports: `content/`.*
