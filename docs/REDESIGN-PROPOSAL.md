@@ -17,6 +17,10 @@ Visitors fall into two very different groups:
 
 Navigation should reflect that split immediately — not make visitors hunt through equal-weight menu items.
 
+### Voice constraint
+
+**No patronizing language.** The current site is full of filler warmth ("We're here to help," "We hope you enjoy," "Curious about…") that talks down to the audience TDHHC serves. All copy — pages, forms, buttons, CTAs — must be direct, factual, and peer-to-peer. See **[CONTENT-VOICE.md](CONTENT-VOICE.md)** for banned phrases, replacements, and a pre-ship checklist.
+
 ---
 
 ## Current state (from archive, May 2026)
@@ -260,6 +264,7 @@ Move from **opt-in fixes** (Sogo toolbar) to **accessible by default**. Keep an 
 - `prefers-reduced-motion` respected
 - Plain language; acronym glossary (ADA, BEI, RID, STAP, DHHS, VP)
 - Atkinson Hyperlegible or Source Sans 3 typography
+- **No patronizing copy** — see [CONTENT-VOICE.md](CONTENT-VOICE.md)
 
 ---
 
@@ -387,6 +392,7 @@ Can be done on the existing WordPress site while the rebuild is in progress:
 
 ## Related documents
 
+- **[CONTENT-VOICE.md](CONTENT-VOICE.md)** — Voice and tone constraint; banned phrases; rewrite reference
 - **[SITEMAP-AND-CONTENT.md](SITEMAP-AND-CONTENT.md)** — Full sitemap, page-by-page content decisions, interpreter layout spec, reuse matrix, staff checklist
 
 ## Next step

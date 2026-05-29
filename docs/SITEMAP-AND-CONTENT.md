@@ -1,6 +1,8 @@
 # TDHHC.org — Sitemap & Content Decisions
 
-Build brief for the redesign. Use alongside [`REDESIGN-PROPOSAL.md`](REDESIGN-PROPOSAL.md). Every page lists **content source**, **build decision**, and **staff action** where needed.
+Build brief for the redesign. Use alongside [`REDESIGN-PROPOSAL.md`](REDESIGN-PROPOSAL.md) and [`CONTENT-VOICE.md`](CONTENT-VOICE.md). Every page lists **content source**, **build decision**, and **staff action** where needed.
+
+**Voice constraint:** Do not migrate patronizing language from the archive. Rewrite all copy per [CONTENT-VOICE.md](CONTENT-VOICE.md) — e.g. no "here to help," "we're here for you," "curious about," "we hope you enjoy."
 
 ---
 
@@ -176,7 +178,7 @@ News                          /news/                           [NEW — index]
 | Request button | Top of page + anchor `#request` | New UX |
 | Cognito embed | Keep `data-key="RUV9PohCIkqzMCpW5J2vsQ"` form 1 | Live integration |
 | Andrea Short contact | **Move adjacent to form** — not buried below WPBakery markup | `interpreter-services` |
-| "Have more questions?" | Attach action: Contact coordinator (VP link + email) | Fix dangling copy |
+| "Have more questions?" filler | **Remove.** Replace with: "Questions: Andrea Short" + VP, voice, email (see CONTENT-VOICE.md) | Rewrite — do not migrate |
 | Signing women photo | Either meaningful alt ("Two women conversing in ASL") or remove | `signing_2-women-min.jpg` |
 | WPBakery block | **Do not migrate** | Discard |
 | ADA / rates copy | Keep substance; shorten intro; add rate table or PDF | `interpreter-services` — staff confirms rates |
@@ -304,8 +306,8 @@ Staff bios + photos if desired.
 
 | Status | Pages |
 |--------|-------|
-| **Ready to migrate** (edit lightly) | Board, Resources links, Places of Worship, Donate copy, Volunteer, most of Interpreter Services body |
-| **Restructure** (same words, new layout) | Interpreter Services, Contact, Home pathway cards |
+| **Ready to migrate** (rewrite voice, keep facts) | Board facts, Resources links, Places of Worship, interpreter policies/rates — strip patronizing phrases per CONTENT-VOICE.md |
+| **Restructure** (rewrite voice + layout) | Interpreter Services, Contact, Home pathway cards |
 | **Replace format** | Events (screenshots → structured) |
 | **Write new** | About/Mission, Caseworker, Programs, News, Testimonials, Privacy, Accessibility |
 | **Do not migrate** | WPBakery markup, ghost email, Divi boilerplate, Sogo plugin dependency |
@@ -372,6 +374,7 @@ Check off before development starts:
 8. Contact
 9. Legal pages
 10. Redirects + launch QA
+11. **Voice pass** — every page against [CONTENT-VOICE.md](CONTENT-VOICE.md)
 
 ---
 
