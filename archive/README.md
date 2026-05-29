@@ -59,6 +59,8 @@ Snapshot of [tdhhc.org](https://tdhhc.org/) captured **May 29, 2026** before a p
 
 ## Known issues at time of archive
 
+- **Ghost email in sitewide footer:** empty `<a href="mailto:nick@ImperiousExpo.com"></a>` on every page — remove before launch
+- **Address needs reconciliation:** archive footers use `1828 ESE Loop 323, Suite LL-14`; live homepage review also cited `1530 SSW Loop 323, Suite 114` — staff must confirm
 - `/about/` page body is **completely empty** (blank Divi layout)
 - `/sitemap.xml` returns HTTP 500
 - Events are published as **screenshot images** rather than structured data

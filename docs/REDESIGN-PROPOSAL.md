@@ -33,13 +33,16 @@ Navigation should reflect that split immediately — not make visitors hunt thro
 
 | Issue | Impact |
 |-------|--------|
+| **Ghost email in footer** | Empty `mailto:nick@ImperiousExpo.com` anchor on every page — remove before launch |
+| **Conflicting physical address** | `1530 SSW Loop 323` (live review) vs. `1828 ESE Loop 323` (archive footers) — staff must confirm |
 | **Flat nav with too many equal-weight items** | Service seekers and supporters get the same menu — no intent-based path |
 | **About page is blank** | No mission, history, or institutional trust |
 | **Homepage buries critical info** | Donation ask competes with mission; interpreter contact not dominant |
 | **VP treated as secondary** | Deaf visitors must dig; voice number gets equal or better placement |
 | **Events as PNG screenshots** | Not accessible, searchable, or maintainable |
 | **Orphaned pages** | `/calendar/`, `/places-of-worship/` exist but aren't in nav |
-| **Interpreter page is text-heavy** | Highest-traffic page lacks scannable structure and audience split |
+| **Interpreter page is text-heavy** | Highest-traffic page lacks scannable structure; WPBakery markup inside Divi; coordinator contact buried below form |
+| **Empty alt text sitewide** | Homepage cards, events screenshots, interpreter signing photo all `alt=""` |
 | **No testimonials, news, or social** | Site feels institutional; doesn't show active community |
 | **No ASL / bilingual content** | Reads as hearing org that serves Deaf people, not Deaf-friendly space |
 | **Unreliable WordPress/Divi host** | Sitemap 500, migration risk, slow loads, plugin dependency |
@@ -382,9 +385,13 @@ Can be done on the existing WordPress site while the rebuild is in progress:
 
 ---
 
+## Related documents
+
+- **[SITEMAP-AND-CONTENT.md](SITEMAP-AND-CONTENT.md)** — Full sitemap, page-by-page content decisions, interpreter layout spec, reuse matrix, staff checklist
+
 ## Next step
 
-Review this plan with the board and Eastland Jones Creative, answer the open questions, then begin **Phase 2 design** with homepage and interpreter services wireframes.
+Review this plan and the sitemap brief with the board and Eastland Jones Creative, answer the open questions (especially **canonical address**), then begin **Phase 2 design** with homepage and interpreter services wireframes.
 
 ---
 
