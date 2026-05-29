@@ -30,6 +30,10 @@
   --color-accent-hover: #084555;
   --color-accent-text: #ffffff;
 
+  --color-link: #0c5c6e;
+  --color-link-hover: #084555;
+  --color-nav-accent: #0c5c6e;
+
   /* Unified chrome — contact bar, banner, footer band */
   --color-chrome: #2d2a28;
   --color-chrome-text: #ffffff;
@@ -91,6 +95,11 @@
   --color-accent-hover: #92400e;
   --color-accent-text: #ffffff;
 
+  /* Links: blue (not amber/red-orange) — accent is for buttons only */
+  --color-link: #1d4ed8;
+  --color-link-hover: #1e3a8a;
+  --color-nav-accent: #1d4ed8;
+
   --color-chrome: #0f172a;
   --color-chrome-text: #f8fafc;
   --color-chrome-muted: #cbd5e1;
@@ -145,9 +154,8 @@
 }
 
 /* ═══════════════════════════════════════════
-   V3 — Wine & ruby (brand-red theme)
-   Original footer PNG + harmonized wine chrome
-   Romantic / ruby reds — not alarm red
+   V3 — Wine (brand-red chrome, non-red links)
+   SVG curve + unified wine chrome
    ═══════════════════════════════════════════ */
 [data-theme="v3"] {
   --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
@@ -161,44 +169,49 @@
   --color-surface: #fce8e8;
   --color-card-bg: #ffffff;
 
-  --color-accent: #9b1e2e;
-  --color-accent-hover: #7c0d0e;
+  /* Buttons only — romantic red, not blood/deep red */
+  --color-accent: #bd2734;
+  --color-accent-hover: #9b1e2e;
   --color-accent-text: #ffffff;
+
+  /* Body/nav links: blue on cream (never red) */
+  --color-link: #1e40af;
+  --color-link-hover: #1e3a8a;
+  --color-nav-accent: #1e40af;
 
   --color-chrome: #58181f;
   --color-chrome-text: #ffffff;
-  --color-chrome-muted: #f5d0d0;
+  --color-chrome-muted: #fff8e6;
 
   --color-banner-bg: var(--color-chrome);
   --color-banner-text: var(--color-chrome-text);
 
   --color-contact-bar-bg: var(--color-chrome);
-  --color-contact-bar-text: #ffd6d6;
+  --color-contact-bar-text: #ffffff;
 
   --color-header-bg: #ffffff;
-  --header-border: 3px solid #9b1e2e;
+  --header-border: 3px solid #622f22;
   --header-shadow: none;
 
-  /* PNG carries curve; band fill matches wine family */
-  --color-footer-bg: #9b1e2e;
+  --color-footer-bg: var(--color-chrome);
   --color-footer-text: #ffffff;
   --color-footer-heading: #ffffff;
-  --color-footer-link: #ffd6d6;
+  --color-footer-link: #fde68a;
   --color-footer-link-hover: #ffffff;
   --color-footer-divider: rgba(255, 255, 255, 0.28);
 
-  --hero-bg: linear-gradient(145deg, #7c0d0e 0%, #58181f 55%, #3d1015 100%);
+  --hero-bg: linear-gradient(145deg, #622f22 0%, #58181f 55%, #3d1015 100%);
   --hero-bg-solid: #58181f;
   --hero-overlay: none;
   --hero-text: #ffffff;
-  --hero-lead: #f5d0d0;
+  --hero-lead: #fff8e6;
   --hero-padding: 3rem 1.25rem;
   --hero-title-width: 22ch;
 
   --color-notice-bg: #fff8e6;
   --color-notice-border: #b45309;
   --color-info-bg: #fce8e8;
-  --color-info-border: #9b1e2e;
+  --color-info-border: #1e40af;
 
   --card-border: 1px solid #e8b4b4;
   --radius: 0.375rem;

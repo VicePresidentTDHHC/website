@@ -2,7 +2,7 @@
 
 **Implemented** per ground rules (see `site/THEMES.md`):
 
-- **V3 Wine** uses the original `TDHHC_footer_lite.png` from tdhhc.org (same asset as Divi `et_pb_section_7`).
+- **V3 Wine** uses the same SVG curve as Slate/Navy, with `--color-footer-bg: var(--color-chrome)` (`#58181F`).
 - **V1 Slate** and **V2 Navy** use an SVG traced from that curve silhouette in `--color-chrome`.
 - Contact bar, preview banner, and footer band share `--color-chrome` per theme.
 - Page layout unchanged; no CTAs in the footer band.

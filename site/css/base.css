@@ -34,11 +34,11 @@ img {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-link, var(--color-accent));
 }
 
 a:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-link-hover, var(--color-accent-hover));
 }
 
 a:focus-visible,
@@ -193,7 +193,7 @@ summary:focus-visible {
 
 .main-nav a:hover,
 .main-nav a[aria-current="page"] {
-  color: var(--color-accent);
+  color: var(--color-nav-accent, var(--color-link, var(--color-accent)));
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
@@ -376,7 +376,7 @@ h1, h2, h3 {
 .tier__amount {
   font-size: 1.75rem;
   font-weight: 800;
-  color: var(--color-accent);
+  color: var(--color-link, var(--color-accent));
   margin: 0 0 0.5rem;
 }
 
@@ -443,7 +443,7 @@ h1, h2, h3 {
 .event-list time {
   font-weight: 700;
   display: block;
-  color: var(--color-accent);
+  color: var(--color-link, var(--color-accent));
 }
 
 .worship-list article {
