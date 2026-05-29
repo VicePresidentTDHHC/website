@@ -179,9 +179,9 @@
   --color-surface: #fce8e8;
   --color-card-bg: #ffffff;
 
-  /* Buttons only — romantic red, not blood/deep red */
-  --color-accent: #bd2734;
-  --color-accent-hover: #9b1e2e;
+  /* Buttons — wine chrome on content; gold on hero */
+  --color-accent: #58181f;
+  --color-accent-hover: #622f22;
   --color-accent-text: #ffffff;
 
   /* Body/nav links: blue on cream (never red) */
@@ -231,4 +231,14 @@
 
 [data-theme="v3"] .hero h1 {
   font-weight: 700;
+}
+
+[data-theme="v3"] .hero .btn--primary {
+  background: #fde68a;
+  color: #58181f;
+}
+
+[data-theme="v3"] .hero .btn--primary:hover {
+  background: #fff8e6;
+  color: #58181f;
 }
