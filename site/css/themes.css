@@ -1,0 +1,204 @@
+/* ── Shared tokens (true red = alerts only) ── */
+:root {
+  --color-alert: #c62828;
+  --color-alert-bg: #ffebee;
+  --color-focus: #2563eb;
+  --max-width: 72rem;
+  --font-size: 1.125rem;
+  --line-height: 1.65;
+}
+
+/* ═══════════════════════════════════════════
+   V1 — Warm Slate & Teal
+   Calm, professional, community trust
+   ═══════════════════════════════════════════ */
+:root,
+[data-theme="v1"] {
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-heading: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --heading-tracking: -0.02em;
+
+  --color-bg: #faf9f7;
+  --color-text: #1c1917;
+  --color-muted: #57534e;
+  --color-border: #d6d3d1;
+  --color-surface: #f5f4f0;
+  --color-card-bg: #ffffff;
+
+  --color-accent: #0f766e;
+  --color-accent-hover: #0d5c56;
+  --color-accent-text: #ffffff;
+
+  --color-banner-bg: #1e3a4c;
+  --color-banner-text: #f0f9ff;
+
+  --color-contact-bar-bg: #134e4a;
+  --color-contact-bar-text: #ecfdf5;
+
+  --color-header-bg: #ffffff;
+  --header-border: 2px solid #e7e5e4;
+  --header-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+
+  --color-footer-bg: #1c1917;
+  --color-footer-text: #e7e5e4;
+  --color-footer-heading: #ffffff;
+  --color-footer-link: #99f6e4;
+  --color-footer-divider: #44403c;
+
+  --hero-bg: linear-gradient(145deg, #134e4a 0%, #1e3a4c 55%, #292524 100%);
+  --hero-bg-solid: #134e4a;
+  --hero-overlay: radial-gradient(ellipse at 80% 20%, rgba(45, 212, 191, 0.15), transparent 55%);
+  --hero-text: #ffffff;
+  --hero-lead: #ccfbf1;
+  --hero-padding: 3.5rem 1.25rem;
+  --hero-title-width: 22ch;
+
+  --color-notice-bg: #fffbeb;
+  --color-notice-border: #d97706;
+  --color-info-bg: #eff6ff;
+  --color-info-border: #2563eb;
+
+  --card-border: 2px solid #e7e5e4;
+  --radius: 0.5rem;
+  --shadow: 0 4px 20px rgba(28, 25, 23, 0.06);
+  --logo-height: 4.5rem;
+}
+
+/* ═══════════════════════════════════════════
+   V2 — Navy & Amber
+   Confident, energetic, distinct headers
+   ═══════════════════════════════════════════ */
+[data-theme="v2"] {
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-heading: "DM Sans", system-ui, sans-serif;
+  --heading-tracking: -0.03em;
+
+  --color-bg: #f8fafc;
+  --color-text: #0f172a;
+  --color-muted: #475569;
+  --color-border: #cbd5e1;
+  --color-surface: #f1f5f9;
+  --color-card-bg: #ffffff;
+
+  --color-accent: #b45309;
+  --color-accent-hover: #92400e;
+  --color-accent-text: #ffffff;
+
+  --color-banner-bg: #0f172a;
+  --color-banner-text: #f8fafc;
+
+  --color-contact-bar-bg: #1e293b;
+  --color-contact-bar-text: #fde68a;
+
+  --color-header-bg: #ffffff;
+  --header-border: none;
+  --header-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+
+  --color-footer-bg: #0f172a;
+  --color-footer-text: #cbd5e1;
+  --color-footer-heading: #fbbf24;
+  --color-footer-link: #fcd34d;
+  --color-footer-divider: #334155;
+
+  --hero-bg: linear-gradient(120deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+  --hero-bg-solid: #0f172a;
+  --hero-overlay: linear-gradient(90deg, rgba(251, 191, 36, 0.08) 0%, transparent 40%);
+  --hero-text: #f8fafc;
+  --hero-lead: #94a3b8;
+  --hero-padding: 4rem 1.25rem;
+  --hero-title-width: 18ch;
+
+  --color-notice-bg: #fffbeb;
+  --color-notice-border: #d97706;
+  --color-info-bg: #eff6ff;
+  --color-info-border: #2563eb;
+
+  --card-border: none;
+  --radius: 0.75rem;
+  --shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
+  --logo-height: 4rem;
+}
+
+[data-theme="v2"] .card {
+  border-top: 4px solid var(--color-accent);
+}
+
+[data-theme="v2"] .hero h1 {
+  font-weight: 800;
+}
+
+[data-theme="v2"] .tier {
+  border-color: #fde68a;
+  background: #fffbeb;
+}
+
+/* ═══════════════════════════════════════════
+   V3 — Forest & Cream
+   Editorial, grounded, East Texas warmth
+   ═══════════════════════════════════════════ */
+[data-theme="v3"] {
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-heading: "Fraunces", Georgia, serif;
+  --heading-tracking: -0.01em;
+
+  --color-bg: #faf8f4;
+  --color-text: #1a2e1a;
+  --color-muted: #4a5d4a;
+  --color-border: #c4d4bc;
+  --color-surface: #f0ebe3;
+  --color-card-bg: #fffef9;
+
+  --color-accent: #2d6a4f;
+  --color-accent-hover: #1b4332;
+  --color-accent-text: #ffffff;
+
+  --color-banner-bg: #1b4332;
+  --color-banner-text: #d8f3dc;
+
+  --color-contact-bar-bg: #2d6a4f;
+  --color-contact-bar-text: #ffffff;
+
+  --color-header-bg: #fffef9;
+  --header-border: 3px solid #2d6a4f;
+  --header-shadow: none;
+
+  --color-footer-bg: #1b4332;
+  --color-footer-text: #b7e4c7;
+  --color-footer-heading: #ffffff;
+  --color-footer-link: #95d5b2;
+  --color-footer-divider: #40916c;
+
+  --hero-bg: #1b4332;
+  --hero-bg-solid: #1b4332;
+  --hero-overlay: none;
+  --hero-text: #ffffff;
+  --hero-lead: #b7e4c7;
+  --hero-padding: 3rem 1.25rem 3rem 2rem;
+  --hero-title-width: 24ch;
+
+  --color-notice-bg: #fff8e6;
+  --color-notice-border: #d97706;
+  --color-info-bg: #e8f5e9;
+  --color-info-border: #2d6a4f;
+
+  --card-border: 1px solid #c4d4bc;
+  --radius: 0.25rem;
+  --shadow: 0 2px 8px rgba(27, 67, 50, 0.08);
+  --logo-height: 4.25rem;
+}
+
+[data-theme="v3"] .hero {
+  border-left: 8px solid #95d5b2;
+}
+
+[data-theme="v3"] .hero__inner {
+  max-width: 40rem;
+}
+
+[data-theme="v3"] .card {
+  background: linear-gradient(180deg, #fffef9 0%, #f0ebe3 100%);
+}
+
+[data-theme="v3"] h1 {
+  font-weight: 600;
+}

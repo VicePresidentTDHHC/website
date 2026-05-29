@@ -6,6 +6,12 @@ Static HTML preview of the redesigned tdhhc.org for board review. **Not connecte
 
 Demonstrate scope and quality of an in-house rebuild vs. the ~$5,000 redesign quote — without fixing the failing WordPress host.
 
+## Visual themes
+
+Three looks via the **Look:** buttons in the top banner (V1 Teal, V2 Navy, V3 Forest). Details: [`THEMES.md`](THEMES.md).
+
+True red is reserved for alerts only — accents are teal, amber, or forest green per theme.
+
 ## View locally
 
 ```powershell

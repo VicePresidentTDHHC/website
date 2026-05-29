@@ -5,16 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Upcoming TDHHC community events and calendar in Tyler, TX.">
   <title>Events &amp; Calendar | TDHHC</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="icon" href="../assets/logo.png">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <div class="preview-banner" role="status">Board preview mock-up — not the live site.</div>
-  <div class="contact-bar">
+    <div class="preview-banner">
+    <div class="preview-banner__inner">
+      <p class="preview-banner__text">Board preview � switch looks below. Not the live site.</p>
+      <div class="theme-picker" role="group" aria-label="Visual theme">
+        <span class="theme-picker__label">Look:</span>
+        <button type="button" class="theme-picker__btn" data-set-theme="v1">V1 Teal</button>
+        <button type="button" class="theme-picker__btn" data-set-theme="v2">V2 Navy</button>
+        <button type="button" class="theme-picker__btn" data-set-theme="v3">V3 Forest</button>
+      </div>
+    </div>
+  </div>
+
+<div class="contact-bar">
     <div class="contact-bar__inner">
       <span>Video Phone: <a href="tel:+19032062210">(903) 206-2210</a></span>
       <span>Voice: <a href="tel:+19036176204">(903) 617-6204</a></span>
@@ -73,6 +81,7 @@
     </div>
     <p class="footer__bottom">© Tyler Deaf and Hard of Hearing Center</p>
   </footer>
+  <script src="../js/theme.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>
