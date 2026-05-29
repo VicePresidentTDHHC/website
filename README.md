@@ -12,4 +12,6 @@ Project workspace for rebuilding [tdhhc.org](https://tdhhc.org/) — the Tyler D
 
 ## Status
 
-Phase 1 complete: site archived + unified plan drafted. Next: staff content workshop, logo assets, wireframes.
+Phase 2 in progress: **board preview mock-up** in [`site/`](site/) — open `site/index.html` or run `python -m http.server 8080` in `site/`.
+
+Planning docs: [`docs/REDESIGN-PROPOSAL.md`](docs/REDESIGN-PROPOSAL.md) · [`docs/PAGE-BY-PAGE-PLAN.md`](docs/PAGE-BY-PAGE-PLAN.md)

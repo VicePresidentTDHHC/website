@@ -40,7 +40,7 @@ Items worth talking through before build — not automatic yeses.
 | **Security: remove generator meta** | Low priority obscurity | **Agree it's low.** Real wins: no xmlrpc, no ghost emails, modern host, HTTPS. |
 | **Events Calendar WP plugin** | Use The Events Calendar plugin | **Interim only.** New site: CMS-managed structured events (already planned). |
 | **Phone format** | Standardize `(903) 617-6204` | **Agree.** Use `tel:+19036176204` and `tel:+19032062210` in HTML. |
-| **Physical address / map** | Add map on Contact | **Agree after staff confirms** canonical address (1828 ESE vs 1530 SSW conflict). |
+| **Physical address / map** | Add map on Contact | **Confirmed:** 1828 ESE Loop 323, Suite LL-14 ([Tyler Paper](https://tylerpaper.com/2026/03/10/tyler-deaf-and-hard-of-hearing-center-connects-services-advocacy-and-connection-across-east-texas/), Navigate Life Texas). 1530 SSW was incorrect/outdated. |
 | **nick@ ghost link** | On 8+ pages | **Confirmed: 10 of 11 pages** (all except blank `about.html` footer template instance). Remove everywhere. |
 
 ---
