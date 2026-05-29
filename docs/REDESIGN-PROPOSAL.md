@@ -392,6 +392,7 @@ Can be done on the existing WordPress site while the rebuild is in progress:
 
 ## Related documents
 
+- **[PAGE-BY-PAGE-PLAN.md](PAGE-BY-PAGE-PLAN.md)** — Detailed audit merge: every page, prioritized actions, agree/adapt/push-back notes
 - **[CONTENT-VOICE.md](CONTENT-VOICE.md)** — Voice and tone constraint; banned phrases; rewrite reference
 - **[SITEMAP-AND-CONTENT.md](SITEMAP-AND-CONTENT.md)** — Full sitemap, page-by-page content decisions, interpreter layout spec, reuse matrix, staff checklist
 

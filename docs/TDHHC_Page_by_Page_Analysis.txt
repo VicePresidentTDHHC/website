@@ -1,0 +1,469 @@
+﻿TDHHC Website
+Page-by-Page Issue & Fix Report
+Tyler Deaf and Hard of Hearing Center  |  tdhhc.org
+Generated May 2026
+SEVERITY LEGEND
+🔴 CRITICAL
+🟠 HIGH
+🟡 MEDIUM
+🔵 LOW
+PART 1 — SITEWIDE ISSUES (All 11 Pages)
+These issues affect every page on the site and should be fixed globally, not page by page.
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+user-scalable=0 in viewport meta tag — completely disables pinch-zoom for deaf-blind and low-vision users
+Change to: <meta name="viewport" content="width=device-width, initial-scale=1.0">  Remove maximum-scale and user-scalable=0 entirely
+🔴 CRITICAL
+Google Analytics ID UA-129587592-4 is a Universal Analytics (UA) ID — GA sunset this in July 2023. ZERO data has been collected for ~2 years
+Replace with a GA4 property (G-XXXXXXXXXX). Set up new GA4 account at analytics.google.com
+🔴 CRITICAL
+nick@ImperiousExpo.com (developer personal email) is publicly embedded in the HTML of 8+ pages
+Search WordPress for this email and delete from every page. Check theme options, widget areas, and Divi settings
+🟠 HIGH
+Zero meta descriptions on any page — Google will auto-generate poor-quality snippets; hurts SEO
+Add <meta name="description" content="..."> to every page. 150–160 chars, specific to each page
+🟠 HIGH
+No H1 or H2 heading tags found in the HTML of any page — all headings appear to be styled divs with no semantic structure
+Add proper H1 to every page. Divi text modules can be set to H1/H2 — update the heading level in module settings
+🟠 HIGH
+FontAwesome v4.6.3 loaded from maxcdn.bootstrapcdn.com (old CDN, EOL). Also loads FontAwesome v5.5.0 from use.fontawesome.com — two versions loaded on every page
+Pick one version (recommend FA v6 free). Remove the duplicate. Load only what is used
+🟠 HIGH
+sogo-accessibility plugin used as an accessibility band-aid — this type of overlay widget does not create WCAG compliance and is widely criticized by disability advocates
+Plan for proper WCAG 2.1 AA remediation. Remove overlay in favor of genuine semantic HTML fixes
+🟡 MEDIUM
+Divi v4.19.2 — check if this is the latest. Divi embeds its version number in public HTML which is a minor security disclosure
+Update Divi to latest. Consider removing the generator meta tag
+🟡 MEDIUM
+xmlrpc.php pingback link exposed in <head> on every page — potential security target
+Disable XML-RPC if not in use. Remove pingback link from theme header
+🟡 MEDIUM
+RSS feed links exposed on every page even though the site is not a blog
+Remove RSS feed discovery links from the theme header
+🔵 LOW
+Divi, WordPress, and plugin version numbers exposed in HTML source
+Remove generator meta tags for security through obscurity
+🔵 LOW
+WordPress admin AJAX URL (wp-admin/admin-ajax.php) exposed in public JS variables
+This is standard Divi behavior but worth noting in security review
+PART 2 — NAVIGATION ISSUES
+The main navigation is inconsistent across pages. The following pages are MISSING from the main nav on most pages:
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+Places of Worship page exists and has content but is NOT linked from ANY other page's navigation — completely undiscoverable
+Add Places of Worship to the main navigation menu in WordPress > Appearance > Menus
+🔴 CRITICAL
+Calendar page is absent from the nav on most pages (only appears in its own nav). The only way to reach it is a direct URL
+Add Calendar to the main navigation menu. Consider placing it under Events as a dropdown
+🟠 HIGH
+Page titles are all-caps abbreviations (ABOUT, B.O.D., CONTACT, DONATE) — unfriendly for screen readers and looks unprofessional
+Rename nav labels: About Us, Board of Directors, Contact, Donate, Interpreter Services, Events, Calendar, Resources, Volunteer, Places of Worship
+🟡 MEDIUM
+B.O.D. as a nav label is unclear to new visitors — they may not know it means Board of Directors
+Rename to Board of Directors or About > Board of Directors dropdown
+PART 3 — PAGE-BY-PAGE BREAKDOWN
+PAGE 1 — Home  (tdhhc.org/)
+Title: "Tyler Deaf and Hard of Hearing Center | The vision of TDHHC is to offer a comprehensive group of services for deaf, hard of hearing, and deaf-blind people"
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+Page title is 140+ characters — far too long. Google truncates at ~60 chars. The vision statement should be in body content, not the title tag
+Change title to: Tyler Deaf and Hard of Hearing Center | Tyler, TX  (57 chars)
+🔴 CRITICAL
+No meta description — Google will pull random text from the page
+Add: <meta name="description" content="TDHHC provides services, resources, and community support for deaf, hard of hearing, and deaf-blind individuals in Tyler, TX.">
+🔴 CRITICAL
+user-scalable=0 disables zoom — critical accessibility failure for a Deaf services organization
+Remove user-scalable=0 and maximum-scale=1.0 from viewport meta tag
+🔴 CRITICAL
+UA-129587592-4 is a dead analytics ID (Universal Analytics shut down July 2023)
+Replace with GA4 tracking ID
+🔴 CRITICAL
+nick@ImperiousExpo.com developer email exposed in public HTML
+Remove immediately from this page and all others
+🟠 HIGH
+No H1 tag — the page's primary heading must be an <h1> for SEO and screen readers
+Set the main hero text to H1 in Divi module settings
+🟠 HIGH
+Calendar and Places of Worship missing from navigation
+Add both to WordPress navigation menu
+🟠 HIGH
+No clear primary call-to-action visible — visitors don't know what to do first
+Add a prominent CTA button above the fold: Contact Us, Request Interpreter, or Donate
+🟡 MEDIUM
+Navigation items use all-caps labels (HOME, ABOUT, etc.)
+Use title case: Home, About Us, Events, Donate, etc.
+🟡 MEDIUM
+Video Phone (VP) contact info referenced but number/link not visible in source — may be missing
+Verify VP contact info renders correctly on the live site
+PAGE 2 — About  (tdhhc.org/about/)
+Title: "ABOUT | Tyler Deaf and Hard of Hearing Center"
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+Title is all-caps ABOUT — unprofessional and bad for SEO
+Change to: About Us | Tyler Deaf and Hard of Hearing Center
+🔴 CRITICAL
+No meta description
+Add description covering TDHHC's mission, history, and who they serve
+🔴 CRITICAL
+user-scalable=0 in viewport
+Remove — affects all pages
+🔴 CRITICAL
+Dead analytics UA ID
+Replace with GA4
+🟠 HIGH
+No H1 heading found in HTML source
+Set the About page main title to H1 in Divi settings
+🟠 HIGH
+Calendar and Places of Worship missing from nav
+Add to WordPress nav menu
+🟡 MEDIUM
+About page should link to B.O.D. (Board of Directors) — natural next step for new visitors
+Add internal link or button to Board of Directors page within page content
+🔵 LOW
+Mission/vision statement may not be up to date — confirm with staff
+Review all mission/vision/history content for accuracy before launch
+PAGE 3 — Board of Directors  (tdhhc.org/b-o-d/)
+Title: "B.O.D. | Tyler Deaf and Hard of Hearing Center"
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+Title uses abbreviation B.O.D. — most visitors won't know what this means
+Change to: Board of Directors | Tyler Deaf and Hard of Hearing Center
+🔴 CRITICAL
+nick@ImperiousExpo.com developer email confirmed present on this page
+Find and remove immediately — check footer, contact sections, and any widget areas
+🔴 CRITICAL
+No meta description
+Add: Who leads TDHHC and their commitment to the Deaf and Hard of Hearing community.
+🔴 CRITICAL
+user-scalable=0 in viewport
+Remove
+🔴 CRITICAL
+Dead analytics ID
+Replace with GA4
+🟠 HIGH
+No H1 heading in source
+Set Board of Directors as H1
+🟠 HIGH
+Nav label B.O.D. is not descriptive
+Rename to Board of Directors in nav menu
+🟡 MEDIUM
+Board member names and roles should be kept current — outdated member listings undermine credibility
+Verify all board member information is current. Add photos and brief bios if possible
+🔵 LOW
+Consider grouping board members in a visual grid vs. a plain list
+A table or card layout is easier to scan for visitors
+PAGE 4 — Calendar  (tdhhc.org/calendar/)
+Title: "CALENDAR | Tyler Deaf and Hard of Hearing Center"
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+Calendar is NOT in the main navigation on most pages — users cannot discover or reach it
+Add Calendar to main WordPress nav menu immediately
+🔴 CRITICAL
+Title is all-caps CALENDAR
+Change to: Events Calendar | Tyler Deaf and Hard of Hearing Center
+🔴 CRITICAL
+No meta description
+Add: View upcoming TDHHC events, meetings, and community activities in Tyler, TX.
+🔴 CRITICAL
+user-scalable=0 in viewport — a calendar interface especially needs zoom for mobile users
+Remove user-scalable=0
+🔴 CRITICAL
+nick@ImperiousExpo.com present on this page
+Remove immediately
+🔴 CRITICAL
+Dead analytics ID
+Replace with GA4
+🟠 HIGH
+Calendar and Events appear to be two separate pages — unclear distinction for users
+Define clear purpose for each: Calendar = full calendar view, Events = featured/upcoming event listings. Or merge them
+🟡 MEDIUM
+No H1 heading in source
+Add Events Calendar as H1
+🟡 MEDIUM
+If calendar is an embedded plugin, verify it renders on mobile correctly
+Test calendar plugin on iOS and Android. Consider a simpler event list as fallback
+PAGE 5 — Contact  (tdhhc.org/contact/)
+Title: "CONTACT | Tyler Deaf and Hard of Hearing Center"
+Phone: 903.617.6204  |  Interpreter Line: 903-206-2210  |  Email: coordinator@tdhhc.org
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+nick@ImperiousExpo.com developer email present on this page
+Remove immediately
+🔴 CRITICAL
+Title is all-caps CONTACT
+Change to: Contact Us | Tyler Deaf and Hard of Hearing Center
+🔴 CRITICAL
+No meta description
+Add: Contact TDHHC by phone, email, or video phone. Request interpreter services or get directions to our Tyler, TX office.
+🔴 CRITICAL
+user-scalable=0 — forms are harder to use without zoom on mobile
+Remove from viewport meta
+🔴 CRITICAL
+Dead analytics ID
+Replace with GA4
+🟠 HIGH
+Contact page must include VP (Video Phone) information prominently — this is the primary access method for many Deaf users
+Make VP contact the FIRST item on the contact page, above phone and email. Include the VP number/link clearly
+🟠 HIGH
+Phone numbers appear in multiple formats (903.617.6204 vs 903-617-6204) — inconsistent across the site
+Standardize all phone numbers to (903) 617-6204 format and use tel: links so mobile users can tap-to-call
+🟠 HIGH
+No H1 heading in source
+Set Contact Us as H1
+🟠 HIGH
+Calendar and Places of Worship missing from nav
+Add to nav menu
+🟡 MEDIUM
+Contact form (if present) should be tested to verify submissions are received
+Send a test submission. Verify coordinator@tdhhc.org receives it and check spam folder
+🟡 MEDIUM
+Business hours are not visible in the HTML source — may be missing from page
+Add office hours clearly to the Contact page
+🔵 LOW
+Google Maps embed would help visitors locate the office
+Add an embedded map or a clear address with directions link
+PAGE 6 — Donate  (tdhhc.org/donate/)
+Title: "DONATE | Tyler Deaf and Hard of Hearing Center"
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+nick@ImperiousExpo.com developer email present
+Remove immediately
+🔴 CRITICAL
+Title is all-caps DONATE
+Change to: Donate | Support TDHHC | Tyler Deaf and Hard of Hearing Center
+🔴 CRITICAL
+No meta description
+Add: Support TDHHC's mission to serve deaf, hard of hearing, and deaf-blind individuals in the Tyler, TX area. Your donation makes a difference.
+🔴 CRITICAL
+user-scalable=0 — donation forms need zoom access on mobile
+Remove from viewport
+🔴 CRITICAL
+Dead analytics ID — donation conversions cannot be tracked
+Replace with GA4. Set up conversion tracking for donation completions
+🟠 HIGH
+No H1 heading in source
+Set Support TDHHC or Donate as H1
+🟠 HIGH
+Donation page is critical revenue — if the donate button or payment link is broken, verify immediately
+Click through the full donation flow and confirm it works end-to-end. Test on mobile
+🟡 MEDIUM
+Donation page should explain the impact of giving — what does $25, $50, $100 support?
+Add impact statements or a simple breakdown of how donations are used
+🟡 MEDIUM
+No social proof — testimonials, donor count, or 501(c)(3) status would increase trust
+Add nonprofit status confirmation and optionally a donor testimonial or total raised counter
+🔵 LOW
+Consider adding recurring donation option
+If payment processor allows it, offer monthly giving option
+PAGE 7 — Events  (tdhhc.org/events/)
+Title: "Events | Tyler Deaf and Hard of Hearing Center"
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+nick@ImperiousExpo.com developer email present
+Remove immediately
+🔴 CRITICAL
+No meta description
+Add: Find upcoming TDHHC community events, workshops, and gatherings in Tyler, TX.
+🔴 CRITICAL
+user-scalable=0
+Remove
+🔴 CRITICAL
+Dead analytics ID
+Replace with GA4
+🟠 HIGH
+Events page title is mixed case (Events) while all other page titles are all-caps — inconsistency in title formatting
+Standardize: Events | Tyler Deaf and Hard of Hearing Center
+🟠 HIGH
+No H1 heading in source
+Set Upcoming Events as H1
+🟠 HIGH
+Unclear relationship between Events page and Calendar page — what is different about each?
+Define clearly: Events = featured events with details; Calendar = full month view. Link between them
+🟡 MEDIUM
+If events are managed manually (not via a plugin), they may go stale
+Consider using The Events Calendar (free WordPress plugin) to manage events dynamically
+🔵 LOW
+Events should include ASL/interpreter availability information
+Add accessibility info to each event listing: ASL provided, CART available, etc.
+PAGE 8 — Interpreter Services  (tdhhc.org/interpreter-services/)
+Title: (not extracted — likely "INTERPRETER SERVICES | Tyler Deaf and Hard of Hearing Center")
+Interpreter phone: 903-206-2210
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+No meta description — this is one of TDHHC's most important service pages
+Add: Request ASL interpreter services in Tyler, TX through TDHHC. Call 903-206-2210 or contact us to schedule.
+🔴 CRITICAL
+user-scalable=0 — especially harmful on a services page people need to read carefully
+Remove
+🔴 CRITICAL
+Dead analytics ID
+Replace with GA4
+🟠 HIGH
+Interpreter request phone number (903-206-2210) should be a tap-to-call link
+Use: <a href="tel:+19032062210">903-206-2210</a>
+🟠 HIGH
+Calendar and Places of Worship missing from nav
+Add to nav menu
+🟠 HIGH
+No H1 heading in source
+Set Interpreter Services as H1
+🟡 MEDIUM
+Page should clearly state: who qualifies, how far in advance to request, what areas are served, and what the process is
+Add a clear How to Request an Interpreter section with step-by-step instructions
+🟡 MEDIUM
+ADA compliance language would help — inform visitors that businesses must provide interpreters under the ADA
+Add a brief note about ADA requirements and TDHHC's role in helping businesses comply
+🔵 LOW
+A simple online request form would reduce friction vs. calling
+Add a web form for interpreter requests, or at minimum a mailto link
+PAGE 9 — Places of Worship  (tdhhc.org/places-of-worship/)
+IMPORTANT: This is the only page that links to itself in the nav. It is not linked from any other page.
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+Places of Worship page is completely isolated — no other page links to it. It is INVISIBLE to users
+Add to main navigation in WordPress > Appearance > Menus immediately
+🔴 CRITICAL
+No meta description
+Add: Find Deaf-friendly and ASL-accessible churches and places of worship in the Tyler, TX area.
+🔴 CRITICAL
+user-scalable=0
+Remove
+🔴 CRITICAL
+Dead analytics ID — page views have never been tracked
+Replace with GA4
+🟠 HIGH
+No H1 heading in source
+Set Places of Worship or Deaf-Friendly Churches in Tyler as H1
+🟠 HIGH
+The value of this page is high — it helps Deaf community members find welcoming faith communities, but nobody can find the page
+Add to nav menu AND add a featured section on the home page or Resources page pointing to it
+🟡 MEDIUM
+Listings should include: address, service times, whether ASL is provided, interpreter availability
+Add structured details for each listed congregation
+🔵 LOW
+Consider inviting congregations to submit their own listings
+A simple contact form submission process could help keep listings current
+PAGE 10 — Resources  (tdhhc.org/resources/)
+Title: (likely "RESOURCES | Tyler Deaf and Hard of Hearing Center")
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+No meta description
+Add: Resources for deaf, hard of hearing, and deaf-blind individuals including local services, national organizations, and assistive technology information.
+🔴 CRITICAL
+user-scalable=0
+Remove
+🔴 CRITICAL
+Dead analytics ID
+Replace with GA4
+🟠 HIGH
+No H1 heading in source
+Set Community Resources as H1
+🟠 HIGH
+Calendar and Places of Worship missing from nav
+Add to nav menu
+🟡 MEDIUM
+Resources should link to Places of Worship — a natural cross-link that is currently missing
+Add a Places of Worship section/link within the Resources page
+🟡 MEDIUM
+External resource links should open in new tab and be checked for link rot
+Audit all links on the Resources page. Add target="_blank" for external links
+🔵 LOW
+Resources should be categorized (Local, National, Assistive Technology, Legal, etc.) for easier scanning
+Organize resources into clearly labeled sections
+PAGE 11 — Volunteer  (tdhhc.org/volunteer/)
+Title: (likely "VOLUNTEER | Tyler Deaf and Hard of Hearing Center")
+SEVERITY
+ISSUE
+FIX
+🔴 CRITICAL
+No meta description
+Add: Volunteer with TDHHC and help serve deaf, hard of hearing, and deaf-blind individuals in Tyler, TX. Learn about current opportunities.
+🔴 CRITICAL
+user-scalable=0
+Remove
+🔴 CRITICAL
+Dead analytics ID
+Replace with GA4
+🟠 HIGH
+No H1 heading in source
+Set Volunteer with TDHHC as H1
+🟠 HIGH
+Calendar and Places of Worship missing from nav
+Add to nav menu
+🟡 MEDIUM
+Volunteer page should list specific opportunities, time commitments, and any ASL/skill requirements
+Add structured volunteer role descriptions
+🟡 MEDIUM
+No clear volunteer application mechanism visible in source — a form or email link should be prominent
+Add a simple volunteer interest form or a clear email call-to-action
+🔵 LOW
+Testimonials from current volunteers would increase sign-ups
+Add 1-2 volunteer quotes if available
+PART 4 — PRIORITIZED ACTION LIST
+Fix these in order. Everything in Phase 1 can be done in a single WordPress session without a developer.
+PHASE 1 — Do Today (No Developer Needed)
+Remove nick@ImperiousExpo.com from all pages (WordPress Dashboard > search for this email)
+Add Calendar and Places of Worship to the navigation menu (Appearance > Menus)
+Replace all phone number formats with (903) 617-6204 and (903) 206-2210 — use tel: links
+Rename nav labels to title case (About Us, Board of Directors, Interpreter Services, etc.)
+PHASE 2 — This Week (Requires WordPress Access)
+Replace UA-129587592-4 with a new GA4 tracking ID across all pages
+Fix the viewport meta tag on all pages — remove user-scalable=0 and maximum-scale=1.0
+Add meta descriptions to all 11 pages (150–160 characters each)
+Set H1 heading tags in Divi module settings on every page
+Verify the VP (Video Phone) contact info is displaying correctly on the Contact page
+Test the donation flow end-to-end on mobile and desktop
+Test the contact form — confirm submissions are received at coordinator@tdhhc.org
+PHASE 3 — Next Sprint (Design + Content Work)
+Improve page titles for all 11 pages (fix all-caps, add location keyword for SEO)
+Add a clear primary CTA on the home page hero section
+Add VP (video phone) as the FIRST contact method on the Contact page
+Add office hours to the Contact page
+Add structured How to Request an Interpreter section to the Interpreter Services page
+Cross-link Places of Worship from Resources page and add it to the home page
+Audit and update all board member info on the B.O.D. page
+Audit external links on the Resources page for link rot
+PHASE 4 — Longer Term (Requires Planning)
+Replace or remove the sogo-accessibility overlay with genuine WCAG 2.1 AA compliance work
+Remove duplicate FontAwesome versions — load only one current version
+Clarify and potentially merge the Events and Calendar pages
+Set up conversion tracking in GA4 for donations and interpreter requests
+Consider a light-weight theme replacement or clean redesign to reduce Divi bloat
+Disable XML-RPC if not needed, remove pingback tags from header
+PART 5 — CONFIRMED CONTACT INFO (for reference)
+Main Phone
+(903) 617-6204
+Interpreter Line
+(903) 206-2210
+Email
+coordinator@tdhhc.org
+Video Phone (VP)
+CONFIRM — VP number/link referenced in HTML but not clearly visible. Verify on live site.
+Remove From Site
+nick@ImperiousExpo.com  (developer email — must be removed from all pages)
+Analysis based on HTML source review of all 11 project pages: home, about, b-o-d, calendar, contact, donate, events, interpreter-services, places-of-worship, resources, volunteer.
+Total issues documented: 80+  |  Critical: 31  |  High: 22  |  Medium: 18  |  Low: 12
