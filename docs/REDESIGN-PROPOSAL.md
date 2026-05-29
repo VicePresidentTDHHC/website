@@ -1,303 +1,391 @@
-# TDHHC.org Redesign Proposal
+# TDHHC.org Redesign Plan
 
-A plan to rebuild the Tyler Deaf and Hard of Hearing Center website on reliable hosting, using the new Eastland Jones Creative logo, and following modern nonprofit and accessibility best practices.
-
----
-
-## Executive summary
-
-The current site runs on WordPress + Divi on an unreliable host. Content is spread across 11 pages with two orphaned pages, one blank page (`/about/`), events posted as screenshots, and several third-party embeds (Zeffy, Cognito Forms, Zoho Calendar) that must be carried forward.
-
-**Recommended direction:** Rebuild as a **fast, accessible static or headless site** on dependable hosting (Vercel, Netlify, or Cloudflare Pages), with a simple CMS layer for staff to update events and news without touching code. Integrate the new logo and a Deaf-community-first design system.
+Unified plan combining site archive findings, technical migration needs, and user-intent analysis. Goal: reorganize existing content around **who visits and why**, fill trust gaps, and rebuild on reliable hosting with the new Eastland Jones Creative brand.
 
 ---
 
-## Current state assessment
+## Guiding principle
 
-### What works well
+**The bones are solid. The content is mostly there.** The redesign is primarily reorganization around user intent, a few missing trust-building pieces, refreshed visual identity, and dependable infrastructure.
 
-- Clear top-bar CTAs: **Call for Interpreter** and **Video Phone**
-- Strong interpreter services page with policy details and coordinator contact
-- Donation flow via Zeffy (no platform fees for nonprofits)
-- Sogo accessibility toolbar (contrast, font size, stop motion)
-- Board of Directors page is current (updated Feb 2026)
-- Resources page has a useful curated link directory
+Visitors fall into two very different groups:
 
-### Critical problems
+| Audience | Primary goal | Nav home |
+|----------|--------------|----------|
+| **People who need services** | Interpreter, caseworker help, programs, resources | **Our Services** |
+| **People who want to support** | Donate, volunteer, stay connected | **Support Us** |
+
+Navigation should reflect that split immediately — not make visitors hunt through equal-weight menu items.
+
+---
+
+## Current state (from archive, May 2026)
+
+### What works
+
+- Interpreter services page has strong policy and coordinator contact detail
+- Donation flow via Zeffy (zero platform fee for nonprofits)
+- Curated resources link directory
+- Board of Directors page is current
+- Top bar already surfaces interpreter and VP links
+
+### What blocks the redesign from succeeding as-is
 
 | Issue | Impact |
 |-------|--------|
-| **About page is blank** | Visitors learn nothing about TDHHC's mission, history, or team |
-| **Unreliable hosting** | Downtime, sitemap 500 errors, migration risk |
-| **Events as PNG screenshots** | Not searchable, not accessible, not mobile-friendly, hard to maintain |
-| **Orphaned pages** | `/calendar/` and `/places-of-worship/` exist but aren't in navigation |
-| **"Coming soon" on Resources** | Worship list exists on a hidden page |
-| **Heavy WordPress/Divi stack** | Slow loads, large HTML, plugin dependency, security surface |
-| **Legacy Google Analytics (UA)** | UA stopped processing in 2024; no current analytics |
-| **Zoom disabled** | `user-scalable=0` violates WCAG |
-| **No ASL video content** | Missed opportunity for primary audience |
-| **No structured services page** | Services mentioned on home/resources but never detailed |
+| **Flat nav with too many equal-weight items** | Service seekers and supporters get the same menu — no intent-based path |
+| **About page is blank** | No mission, history, or institutional trust |
+| **Homepage buries critical info** | Donation ask competes with mission; interpreter contact not dominant |
+| **VP treated as secondary** | Deaf visitors must dig; voice number gets equal or better placement |
+| **Events as PNG screenshots** | Not accessible, searchable, or maintainable |
+| **Orphaned pages** | `/calendar/`, `/places-of-worship/` exist but aren't in nav |
+| **Interpreter page is text-heavy** | Highest-traffic page lacks scannable structure and audience split |
+| **No testimonials, news, or social** | Site feels institutional; doesn't show active community |
+| **No ASL / bilingual content** | Reads as hearing org that serves Deaf people, not Deaf-friendly space |
+| **Unreliable WordPress/Divi host** | Sitemap 500, migration risk, slow loads, plugin dependency |
+| **Accessibility is opt-in** | Sogo toolbar helps, but contrast/font fixes shouldn't require toggles |
+| **Legacy analytics (UA)** | No longer collects data |
+
+### Integrations to preserve
+
+| Service | Purpose |
+|---------|---------|
+| Zeffy | Donations, sponsorship, email + paper newsletters |
+| Cognito Forms | Interpreter request form |
+| Zoho Calendar | Community calendar (consider replacing) |
+| Amazon Wishlist | In-kind giving |
+| Facebook group | Community (`facebook.com/groups/295002970853564`) |
 
 ---
 
-## Proposed information architecture
+## Information architecture
 
-Simplify navigation while surfacing hidden content:
+### Primary navigation (5 items)
+
+Replace the current flat list (HOME, ABOUT, INTERPRETER SERVICES, DONATE, RESOURCES, CONTACT, EVENTS) with intent-based structure:
 
 ```
-HOME
-├── About
-│   ├── Our Story & Mission      ← NEW (replaces blank About page)
-│   ├── Board of Directors       ← existing B.O.D. content
-│   └── Volunteer                ← existing
-├── Services                     ← NEW dedicated section
-│   ├── Interpreter Services     ← existing (primary revenue/service)
-│   ├── Community Programs       ← literacy, STAP, DHHS outreach
-│   └── For Businesses (ADA)     ← entity-focused interpreter info
-├── Resources
-│   ├── Helpful Links            ← existing curated list
-│   ├── Places of Worship        ← move from orphaned page
-│   └── College & Training       ← TJC ITP, interpreter training
-├── Events & Calendar            ← merge Events + Calendar
-├── Donate
-└── Contact
+[Logo]   Our Services   About   Support Us   Resources   Contact
 ```
 
-**Retire or redirect:** `/calendar/` → `/events/`, `/b-o-d/` → `/about/board/`
+| Nav item | Subpages / anchors | Source content |
+|----------|-------------------|----------------|
+| **Our Services** | Interpreter Services · Caseworker & Advocacy · Programs · Events & Calendar | `interpreter-services`, new outlines, `events` + `calendar` |
+| **About** | Mission & History · Board of Directors · Staff | blank `about`, `b-o-d` |
+| **Support Us** | Donate · Volunteer · Newsletter · Sponsorship · Wishlist | `donate`, `volunteer`, Zeffy links |
+| **Resources** | Helpful Links · Places of Worship · College Guide | `resources`, `places-of-worship` |
+| **Contact** | Contact form · VP · voice · address · map | `contact` |
+
+**Removed from top nav:** standalone Donate, Events, Interpreter Services, Volunteer, B.O.D. — all live under the sections above.
+
+### URL redirects (preserve SEO)
+
+| Old URL | New URL |
+|---------|---------|
+| `/interpreter-services/` | `/services/interpreters/` |
+| `/b-o-d/` | `/about/board/` |
+| `/volunteer/` | `/support/volunteer/` |
+| `/donate/` | `/support/donate/` |
+| `/events/`, `/calendar/` | `/services/events/` |
+| `/places-of-worship/` | `/resources/places-of-worship/` |
 
 ---
 
-## Design recommendations
+## Page-by-page plan
 
-### 1. Deaf-first, accessibility-led design
+### Homepage
 
-This audience should drive every decision—not be an afterthought.
+**Problem:** Visitors should know within 3 seconds what TDHHC does, who it serves, and how to reach them. Today the donation ask competes with the mission statement.
 
-- **WCAG 2.2 AA minimum** (aim for AAA on contrast for body text)
-- **ASL welcome video** on homepage hero (with captions and transcript)
-- **Persistent VP button** — sticky "Video Phone" FAB on mobile, always visible
-- **No autoplay** audio/video; respect `prefers-reduced-motion`
-- **Allow zoom** — remove `user-scalable=0`
-- **Semantic HTML** — proper headings, landmarks, skip links
-- **Keyboard navigation** — all menus, forms, and modals fully operable
-- **Built-in accessibility** — prefer native CSS (contrast modes, font scaling) over third-party toolbar plugins where possible; keep toolbar as optional enhancement
-- **Plain language** — short sentences, scannable headings, glossary for acronyms (ADA, BEI, RID, STAP, DHHS)
-
-### 2. New brand integration (Eastland Jones Creative logo)
-
-- Request logo files in **SVG + PNG** (full color, reversed/white, icon-only)
-- Define a small design token set:
-  - Primary: new brand color(s) from logo
-  - Accent: keep recognizable red `#d7282f` if it remains in new brand, or migrate gracefully
-  - Neutral palette for high contrast
-  - Typography: one readable sans-serif (e.g., **Source Sans 3**, **Inter**, or **Atkinson Hyperlegible**—designed for low vision)
-- **Do not** use text-in-images for headings (current events screenshots)
-
-### 3. Homepage layout (wireframe concept)
+**Above the fold — one clear primary CTA:**
 
 ```
-┌─────────────────────────────────────────────────────┐
-│  VP: 903-206-2210  |  Voice: 903-617-6204  |  Email  │
-├─────────────────────────────────────────────────────┤
-│  [Logo]     About  Services  Resources  Events  ... │
-├─────────────────────────────────────────────────────┤
-│  HERO: Mission statement + ASL video thumbnail      │
-│  [Request Interpreter]  [Contact Us]  [Donate]      │
-├─────────────────────────────────────────────────────┤
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐            │
-│  │Interpret │ │ Resources│ │  Donate  │            │
-│  │ Services │ │ & Links  │ │  Support │            │
-│  └──────────┘ └──────────┘ └──────────┘            │
-├─────────────────────────────────────────────────────┤
-│  UPCOMING EVENTS (structured cards, not screenshots) │
-├─────────────────────────────────────────────────────┤
-│  Footer: address, VP, social, 501(c)(3) notice      │
-└─────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│  VP 903-206-2210  ·  Voice 903-617-6204  ·  coordinator@…   │  ← equal visual weight
+├──────────────────────────────────────────────────────────────┤
+│  [Logo]    Our Services   About   Support Us   Resources   Contact
+├──────────────────────────────────────────────────────────────┤
+│                                                              │
+│  HERO: "East Texas's resource center for Deaf, Hard of      │
+│         Hearing, and DeafBlind communities."                   │
+│                                                              │
+│  [ASL welcome video — captioned]                             │
+│                                                              │
+│  ┌─────────────────────────────┐                            │
+│  │  Request an Interpreter  →  │  ← single primary CTA      │
+│  └─────────────────────────────┘                            │
+│  Secondary: Contact Us · Our Services                        │
+│                                                              │
+├──────────────────────────────────────────────────────────────┤
+│  NEWS & UPDATES (3 latest — shows org is active)              │
+├──────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
+│  │ Our Services│  │  Resources  │  │  Support Us │         │
+│  │  (need help)│  │  (find links)│  │  (give back)│         │
+│  └─────────────┘  └─────────────┘  └─────────────┘         │
+├──────────────────────────────────────────────────────────────┤
+│  COMMUNITY VOICES (1–2 testimonials)                         │
+├──────────────────────────────────────────────────────────────┤
+│  UPCOMING EVENTS (structured cards — not screenshots)        │
+├──────────────────────────────────────────────────────────────┤
+│  Footer: address · VP · voice · social · 501(c)(3)          │
+└──────────────────────────────────────────────────────────────┘
 ```
 
-### 4. Mobile-first
-
-Most community members will visit on phones. Prioritize:
-
-- Tap targets ≥ 44×44px
-- Click-to-call and click-to-VP links
-- Hamburger menu with clear labels (not "Select Page")
-- Fast load on 4G (< 3s LCP)
+**Homepage rules:**
+- Lead with **who TDHHC serves**, not a donation ask
+- **Interpreter request** is the #1 CTA (links to `/services/interpreters/#request`)
+- **VP and voice numbers equally prominent** in header and footer — click-to-call / click-to-VP on mobile
+- Donate moves to Support Us section and footer — not hero competition
+- Donation is one tap away via nav, never buried
 
 ---
 
-## Technical architecture options
+### Our Services
 
-### Option A — Recommended: Static site + headless CMS
+Hub page routing two audiences to the right content.
 
-| Layer | Suggestion |
-|-------|------------|
-| Framework | **Astro** or **Next.js** (static export) |
-| CMS | **Sanity**, **Decap CMS** (Git-based), or **WordPress headless** if staff prefer familiar WP admin |
-| Hosting | **Cloudflare Pages** or **Netlify** (generous free tier, global CDN, 99.9%+ uptime) |
-| Forms | Keep **Cognito Forms** embed or migrate to **Formspree** / **Netlify Forms** |
-| Donations | Keep **Zeffy** embeds (already zero-fee) |
-| Calendar | Replace Zoho iframe with **Google Calendar embed**, **Zeffy events**, or CMS-managed events |
-| Analytics | **Plausible** or **Google Analytics 4** (privacy-respecting) |
+#### Interpreter Services (`/services/interpreters/`) — highest traffic
 
-**Pros:** Fast, secure, cheap, portable, no WordPress maintenance  
-**Cons:** Staff need brief CMS training
+**Problem:** Text-heavy wall; businesses and Deaf individuals have different needs but share one page.
 
-### Option B: Modern WordPress on managed hosting
+**Structure:**
 
-| Layer | Suggestion |
-|-------|------------|
-| Host | **WP Engine**, **Kinsta**, or **Cloudways** |
-| Theme | Lightweight block theme (not Divi)—**Twenty Twenty-Five** or custom block theme |
-| Builder | Native Gutenberg blocks only |
+1. **Sticky top bar:** `[ Request an Interpreter ]` button → jumps to Cognito form or `mailto:coordinator@tdhhc.org`
+2. **Audience picker** (two cards, equal prominence):
+   - **"I'm a business or organization"** → ADA compliance value prop, billing, rates, Cognito form
+   - **"I'm Deaf/HoH and need help accessing services"** → caseworker advocacy, how TDHHC helps navigate appointments, contact info
+3. **Plain-language ADA summary** (for businesses):
+   - Entities must provide effective communication
+   - TDHHC is your backup plan — certified interpreters, predictable rates, no exclusivity
+4. **Rate information** — currently vague ("reasonable and competitive"). **Action item for staff:** publish a rate table or downloadable PDF. Until then, "Contact coordinator for current rates" with direct VP/email.
+5. **FAQ accordion** — billing cycle, requesting specific interpreters, cancellation, certification levels
+6. **For interpreters** — resume submission, mentoring, TJC ITP link (existing content, lower on page)
+7. **Cognito Forms embed** (preserve existing integration)
 
-**Pros:** Familiar editing for staff already used to WordPress  
-**Cons:** Ongoing plugin/theme updates, higher cost, still heavier than static
+#### Caseworker & Advocacy (new page)
 
-### Option C: Fully managed nonprofit platform
+Content to develop with staff — referenced on current site but never dedicated:
+- DHHS Access Specialist program
+- STAP telephone equipment assistance
+- Help navigating medical, legal, and social services
 
-Platforms like **Neon One**, **Bloomerang**, or **CharityStack** bundle CRM + donations + events.
+#### Programs (new page)
 
-**Pros:** All-in-one  
-**Cons:** Monthly cost, less design flexibility, may not fit interpreter-service workflows
-
-**Our recommendation: Option A** for reliability and performance, with Decap CMS or Sanity for easy event/news updates.
-
----
-
-## Content improvements
-
-### About page (currently blank) — draft outline
-
-Staff should fill in, but the page needs:
-
-1. **Mission statement** — "comprehensive services for deaf, hard of hearing, and deaf-blind people"
-2. **Founded 2012** — 501(c)(3) nonprofit
-3. **Service area** — East Texas
-4. **One-stop shop** vision (quoted from current home page)
-5. **Photo** of center, staff, or community event
-6. **ASL video** introduction from coordinator or board member
-
-### Services page (new)
-
-Break out what the home page mentions in passing:
-
-- Interpreter services (link to full page)
+Consolidate scattered mentions:
 - Adult literacy classes
-- STAP / telephone equipment assistance (link to Texas HHSC)
-- Deaf & Hard of Hearing Access Specialist program
-- Mentoring / shadowing for student interpreters
+- Interpreter mentoring / shadowing
+- Community outreach
 
-### Events (replace screenshots)
+#### Events & Calendar (`/services/events/`)
 
-Move from static images to structured events:
-
-```yaml
-- title: "April Community Meetup"
-  date: 2026-04-15
-  time: "6:00 PM"
-  location: "TDHHC Office"
-  description: "..."
-  asl_interpreter_available: true
-```
-
-Display as accessible cards with `.ics` download / "Add to Calendar" links.
-
-### Places of worship
-
-Merge the full `/places-of-worship/` content into Resources. Add filter by city (Tyler, Longview) and service type (interpreted vs. ASL).
-
-### Interpreter services
-
-- Keep Cognito form embed
-- Add FAQ accordion (billing, cancellation, certification levels)
-- Prominent note: **"Entities request interpreters, not individual clients"** (already stated—make it unmissable)
-- Add downloadable rate sheet PDF if appropriate
+- Merge `events` + `calendar` pages
+- Replace screenshot images with structured event entries (title, date, time, location, description, ASL/interpreter noted)
+- Embed or sync calendar (Zoho, Google Calendar, or CMS-managed)
+- "Add to Calendar" / `.ics` download per event
 
 ---
 
-## SEO and discoverability
+### About
 
-- Unique `<title>` and meta description per page
-- LocalBusiness + NGO **structured data** (JSON-LD) with address, VP, hours
-- Google Business Profile sync
-- XML sitemap (auto-generated on static hosts)
-- `robots.txt` and canonical URLs
-- Alt text on all images (many currently empty, e.g. `alt=""` on home promos)
+| Page | Content | Status |
+|------|---------|--------|
+| **Mission & History** | Founded 2012, 501(c)(3), East Texas service area, "one-stop shop" vision, photos | **Blank today — must write** |
+| **Board of Directors** | Existing B.O.D. content (current through Feb 2026) | Ready from archive |
+| **Staff** (optional) | Key personnel, photos, ASL intro videos | New |
 
----
-
-## Security and compliance
-
-- **HTTPS** everywhere (Let's Encrypt via host)
-- **HIPAA awareness** — interpreter requests may contain appointment details; ensure Cognito Forms encryption and privacy policy are current
-- **ADA compliance** for the website itself (ironically critical for this organization)
-- **Privacy policy** and **accessibility statement** pages (missing today)
-- Remove unused WordPress attack surface (`xmlrpc.php` was exposed on old site)
+Include at least one **ASL video introduction** from coordinator or board member — signals genuine Deaf-friendly space.
 
 ---
 
-## Migration plan (phased)
+### Support Us
+
+Consolidates all giving and engagement paths for the "supporter" audience.
+
+| Page | Content | Source |
+|------|---------|--------|
+| **Donate** | Zeffy embed, mail-in address, tax-deductible notice | `donate` |
+| **Volunteer** | ASL fluency requirements, application process | `volunteer` |
+| **Newsletter** | Email + paper signup via Zeffy | `events`, `resources` |
+| **Sponsorship** | Zeffy sponsorship link | `donate` |
+| **Wishlist** | Amazon wishlist link | `donate` |
+
+Supporter audience gets a single nav destination with clear sub-paths — no hunting between Donate, Volunteer, and Events for newsletter signup.
+
+---
+
+### Resources
+
+| Page | Content | Status |
+|------|---------|--------|
+| **Helpful Links** | News (D-Pan, Daily Moth), orgs (NAD, TAD, HLAA), interpreting orgs (RID, BEI, TSID) | Ready |
+| **Places of Worship** | Full list from orphaned page — Tyler/Longview churches, ASL fellowship | Ready (hidden today) |
+| **College Guide** | Deaf/HoH college student guide, TJC ITP | Ready |
+
+Add filters on Places of Worship: city, interpreted vs. ASL worship.
+
+---
+
+### Contact
+
+- Keep contact form fields (name, company, email, phone, message, referral source)
+- **VP and voice displayed with equal weight** above the form
+- Embedded map
+- Office hours (if applicable — confirm with staff)
+- Link to interpreter request for entity inquiries
+
+---
+
+## Accessibility (especially important for this audience)
+
+Move from **opt-in fixes** (Sogo toolbar) to **accessible by default**. Keep an enhanced toolbar as optional, not required.
+
+| Current | Redesign |
+|---------|----------|
+| Standard contrast; high contrast is toggle | **High contrast on by default**; optional standard mode |
+| VP number in secondary header bar | **VP = voice prominence** everywhere: header, footer, contact, interpreter page |
+| Many images `alt=""` | **Descriptive alt text** on every image; decorative images marked `alt=""` explicitly |
+| 14px body; resize via toolbar | **18px base font**, comfortable line-height (1.6+); no resize needed for most users |
+| No video captions | **Captions on all video**; transcripts linked below |
+| `user-scalable=0` blocks zoom | **Allow pinch-zoom** |
+| Sogo plugin dependency | Built-in CSS tokens + optional toolbar |
+
+**Standards target:** WCAG 2.2 AA minimum; AAA for body text contrast where possible.
+
+**Additional:**
+- Semantic HTML landmarks, skip links, keyboard-navigable menus
+- `prefers-reduced-motion` respected
+- Plain language; acronym glossary (ADA, BEI, RID, STAP, DHHS, VP)
+- Atkinson Hyperlegible or Source Sans 3 typography
+
+---
+
+## New content to create
+
+These pieces are missing entirely and build trust, community, and donations:
+
+| Content | Purpose | Effort |
+|---------|---------|--------|
+| **Community testimonials** | 2–4 quotes from Deaf community members, businesses, or families — humanizes the org | Staff outreach |
+| **News & updates feed** | Announcements, event recaps, program news — proves the org is active | CMS-managed; 1 post/month minimum |
+| **Social media links** | Facebook group at minimum; add Instagram/YouTube if active | Confirm accounts with staff |
+| **ASL video introductions** | Homepage hero + About page — immediate Deaf-friendly signal | Record with coordinator/board |
+| **Mission & history copy** | About page body (currently blank) | Staff workshop |
+| **Caseworker & programs pages** | Services mentioned but never detailed | Staff workshop |
+| **Rate sheet or pricing FAQ** | Interpreter page transparency | Coordinator input |
+| **Privacy policy & accessibility statement** | Legal/compliance pages | Template + review |
+
+---
+
+## Design & brand
+
+Eastland Jones Creative new logo + refreshed palette do heavy lifting. Define early:
+
+- Logo files: SVG, PNG (full color, reversed, icon-only)
+- Color tokens from new brand (evaluate whether `#d7282f` red carries forward)
+- High-contrast default palette
+- No text baked into images (especially events)
+- Photography: community, signing, events — not stock handshakes
+
+---
+
+## Technical architecture
+
+**Recommended:** Static site + lightweight CMS on reliable CDN hosting.
+
+| Layer | Choice |
+|-------|--------|
+| Framework | Astro or Next.js (static export) |
+| CMS | Decap CMS (Git-based) or Sanity — for news, events, testimonials |
+| Hosting | Cloudflare Pages or Netlify |
+| Forms | Cognito Forms (interpreter), contact form via Formspree or Netlify Forms |
+| Donations / newsletters | Zeffy embeds (unchanged) |
+| Analytics | Google Analytics 4 or Plausible |
+| Calendar | Google Calendar embed or CMS events |
+
+**Why not stay on WordPress/Divi:** unreliable current host, heavy page weight, Divi lock-in, blank About page suggests builder fragility. If staff strongly prefer WordPress, use managed hosting (Kinsta, WP Engine) with a block theme — not Divi.
+
+**Estimated ongoing cost:** $0–50/month.
+
+---
+
+## Migration phases
 
 ### Phase 1 — Foundation (weeks 1–2)
-- [x] Archive current site (done — see `archive/`)
+- [x] Archive current site (`archive/`)
+- [x] Unified redesign plan (this document)
 - [ ] Collect new logo assets from Eastland Jones Creative
-- [ ] Confirm hosting choice
-- [ ] Draft About page content with TDHHC staff
-- [ ] Inventory all Zeffy/Cognito/Zoho account credentials
+- [ ] Confirm Zeffy, Cognito, Zoho credentials
+- [ ] Content workshop: About, caseworker, programs, testimonials
+- [ ] Confirm social media accounts to link
+- [ ] Coordinator: rate sheet or pricing FAQ content
 
-### Phase 2 — Build (weeks 3–5)
-- [ ] Set up repo, design tokens, component library
-- [ ] Build pages from archived content
-- [ ] Integrate forms, donations, calendar
-- [ ] Add ASL video(s) and accessibility features
+### Phase 2 — Design (weeks 2–3)
+- [ ] Design tokens (color, type, contrast defaults)
+- [ ] Wireframes: homepage, interpreter services, nav
+- [ ] Component library (header with VP, CTA buttons, event cards, testimonial block)
+- [ ] Stakeholder review with board + Eastland Jones Creative
+
+### Phase 3 — Build (weeks 3–5)
+- [ ] Scaffold site repo
+- [ ] Build all pages from archived content + new copy
+- [ ] Integrate Zeffy, Cognito, calendar
+- [ ] Record and embed ASL videos
 - [ ] 301 redirects from all old URLs
+- [ ] News/updates CMS workflow for staff
 
-### Phase 3 — Review (week 6)
-- [ ] Accessibility audit (WAVE, axe, manual screen reader test)
+### Phase 4 — QA & launch (week 6)
+- [ ] Accessibility audit (axe, WAVE, screen reader, VP click-to-call on mobile)
 - [ ] Staff CMS training
-- [ ] Board/stakeholder review
-
-### Phase 4 — Launch
-- [ ] DNS cutover (low-traffic window)
-- [ ] Monitor analytics and form submissions
-- [ ] Decommission old host after 30-day parallel run
+- [ ] DNS cutover
+- [ ] Monitor forms, donations, analytics for 30 days
+- [ ] Decommission old host
 
 ---
 
-## Estimated ongoing costs
+## Quick wins (current site, before launch)
 
-| Item | Approx. monthly |
-|------|-----------------|
-| Cloudflare Pages / Netlify | $0–$20 |
-| Domain (tdhhc.org) | ~$1–2 (annual amortized) |
-| CMS (Sanity free tier / Decap) | $0 |
-| Zeffy donations | $0 platform fee |
-| Cognito Forms | $0–$15 depending on volume |
-| Analytics (Plausible) | $0–$9 |
-| **Total** | **~$0–$50/mo** vs. unreliable shared hosting |
+Can be done on the existing WordPress site while the rebuild is in progress:
 
----
-
-## Quick wins (can do immediately)
-
-1. **Fix the blank About page** on current site while redesign is in progress
-2. **Add Places of Worship** link to Resources (content already exists)
-3. **Link Calendar** from Events page
-4. **Replace UA analytics** with GA4
-5. **Remove `user-scalable=0`** from viewport meta tag
-6. **Add alt text** to homepage promo images
+1. Fix the **blank About page** with mission/history draft
+2. Add **Places of Worship** link on Resources (content already exists)
+3. Link **Calendar** from Events page
+4. Add **Facebook group** link to footer
+5. Remove **`user-scalable=0`** from viewport
+6. Add **alt text** to homepage images
+7. Replace **UA analytics** with GA4
 
 ---
 
-## Next steps
+## Success metrics
 
-1. Review this proposal with TDHHC board and Eastland Jones Creative
-2. Choose architecture (we recommend **Option A: Astro + Cloudflare Pages**)
-3. Provide new logo files and any brand guidelines
-4. Schedule a content workshop to fill the About page and Services section
-5. Begin Phase 2 build in this repository
+| Metric | Target |
+|--------|--------|
+| Homepage clarity | Visitor can state TDHHC's purpose within 3 seconds (user testing) |
+| Interpreter requests | Form submissions maintained or increased post-launch |
+| Accessibility | WCAG 2.2 AA audit pass; VP reachable in ≤2 taps on mobile |
+| Performance | LCP < 2.5s on mobile |
+| Uptime | 99.9%+ (vs. current unreliable host) |
+| Engagement | Newsletter signups, donations, event page views tracked in GA4 |
 
 ---
 
-*Prepared from site archive captured May 29, 2026. Source: [tdhhc.org](https://tdhhc.org/)*
+## Open questions for TDHHC staff
+
+1. **Caseworker services** — what is offered today, and what should the page say?
+2. **Rate sheet** — can published rates be shared, or coordinator-quote only?
+3. **Social media** — which platforms are active and should be linked?
+4. **Testimonials** — who can provide quotes (with permission)?
+5. **ASL videos** — who will record, and is captioning service available?
+6. **Events** — who will maintain the calendar post-launch?
+7. **New logo** — when will final assets be delivered from Eastland Jones Creative?
+
+---
+
+## Next step
+
+Review this plan with the board and Eastland Jones Creative, answer the open questions, then begin **Phase 2 design** with homepage and interpreter services wireframes.
+
+---
+
+*Combined from site archive (May 29, 2026) and stakeholder analysis. Source: [tdhhc.org](https://tdhhc.org/)*

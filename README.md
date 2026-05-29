@@ -5,8 +5,8 @@ Project workspace for rebuilding [tdhhc.org](https://tdhhc.org/) — the Tyler D
 ## Contents
 
 - [`archive/`](archive/) — Snapshot of the live site (May 2026) before migration
-- [`docs/REDESIGN-PROPOSAL.md`](docs/REDESIGN-PROPOSAL.md) — Improvement plan and technical recommendations
+- [`docs/REDESIGN-PROPOSAL.md`](docs/REDESIGN-PROPOSAL.md) — Unified redesign plan (user intent, IA, pages, accessibility, migration)
 
 ## Status
 
-Phase 1 complete: current site archived. Next: review proposal, collect new logo assets, choose hosting stack.
+Phase 1 complete: site archived + unified plan drafted. Next: staff content workshop, logo assets, wireframes.
