@@ -7,6 +7,7 @@ Project workspace for rebuilding [tdhhc.org](https://tdhhc.org/) — the Tyler D
 | Path | What it is |
 |------|------------|
 | [`www/`](www/) | **Current website** — board preview mock-up; deploy this folder |
+| [`brand/`](brand/) | **Brand kit** — EJC logos (SVG/PNG), fonts, color cheatsheet |
 | [`archive/`](archive/) | Original WordPress site snapshot (May 2026) — HTML, logos, metadata only |
 | [`content/`](content/) | WordPress content exports (markdown) used when writing new copy |
 | [`reference/`](reference/) | Extracted Divi CSS and other build references |
