@@ -323,8 +323,7 @@ main {
   max-width: var(--hero-title-width);
   color: var(--hero-text);
   font-family: var(--font-display);
-  line-height: 1.6;
-  padding-block-end: 0.125em;
+  line-height: 1.45;
 }
 
 .hero .lead {
