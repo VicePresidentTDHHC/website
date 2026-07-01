@@ -10,6 +10,8 @@ Demonstrate scope and quality of an in-house rebuild vs. the ~$5,000 redesign qu
 
 Three looks via the **Look:** buttons in the top banner (V1 Teal, V2 Navy, V3 Forest). Details: [`THEMES.md`](THEMES.md).
 
+Typography follows the EJC brand kit: **Erstoria** for page titles and heroes; **Atkinson Hyperlegible** for body copy (accessible stand-in for Optima). See [`../brand/README.md`](../brand/README.md).
+
 True red is reserved for alerts only — accents are teal, amber, or forest green per theme.
 
 ## View locally

@@ -32,4 +32,15 @@ These files in [`www/assets/`](../www/assets/) are copied from this kit for the 
 - `logo-white.svg` / `logo-white.png` — wide color light (footer)
 - `favicon.svg` / `favicon.png` — icon color dark
 
-Update HTML to reference SVG where possible. Original archive logos remain in [`archive/assets/`](../archive/assets/) only.
+## Web typography (mock-up)
+
+Erstoria is self-hosted in [`www/assets/fonts/`](../www/assets/fonts/) and loaded via [`www/css/fonts.css`](../www/css/fonts.css):
+
+- **H1 / hero titles** — Erstoria (40px max)
+- **H2** — Atkinson Hyperlegible bold (32px; stands in for Optima until web license)
+- **Body** — Atkinson Hyperlegible (16px)
+- **`.callout`** — Erstoria uppercase (24px)
+
+Confirm web embedding rights with EJC before production launch.
+
+## Logo naming

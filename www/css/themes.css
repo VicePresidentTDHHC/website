@@ -5,8 +5,11 @@
   --color-alert-bg: #ffebee;
   --color-focus: #1d4ed8;
   --max-width: 72rem;
-  --font-size: 1.125rem;
+  --font-display: "Erstoria", Georgia, "Times New Roman", serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-size: 1rem;
   --line-height: 1.7;
+  --heading-tracking: 0.01em;
 }
 
 /* ═══════════════════════════════════════════
@@ -15,10 +18,6 @@
    ═══════════════════════════════════════════ */
 :root,
 [data-theme="v1"] {
-  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
-  --font-heading: "Atkinson Hyperlegible", system-ui, sans-serif;
-  --heading-tracking: -0.02em;
-
   --color-bg: #fafaf8;
   --color-text: #0a0a0a;
   --color-muted: #3d3d3d;
@@ -80,10 +79,6 @@
    Unified navy chrome
    ═══════════════════════════════════════════ */
 [data-theme="v2"] {
-  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
-  --font-heading: "Atkinson Hyperlegible", system-ui, sans-serif;
-  --heading-tracking: -0.02em;
-
   --color-bg: #f8fafc;
   --color-text: #0a0f1a;
   --color-muted: #334155;
@@ -155,7 +150,7 @@
 }
 
 [data-theme="v2"] .hero h1 {
-  font-weight: 800;
+  font-weight: 400;
 }
 
 [data-theme="v2"] .tier {
@@ -168,10 +163,6 @@
    SVG curve + unified wine chrome
    ═══════════════════════════════════════════ */
 [data-theme="v3"] {
-  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
-  --font-heading: "Atkinson Hyperlegible", system-ui, sans-serif;
-  --heading-tracking: -0.02em;
-
   --color-bg: #fffaf9;
   --color-text: #1a0a0c;
   --color-muted: #4a2828;
@@ -230,7 +221,7 @@
 }
 
 [data-theme="v3"] .hero h1 {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 [data-theme="v3"] .hero .btn--primary {
