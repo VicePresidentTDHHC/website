@@ -35,12 +35,12 @@ function Get-Footer([string]$prefix, [switch]$Full) {
 $curveSvg
     <div class="site-footer__body">
       <div class="footer__inner">
-        <div class="footer__logo">
-          <img src="${prefix}assets/logo-white.png" alt="" width="392" height="245" class="footer__logo-img">
-        </div>
-        <div>
-          <h2>Tyler Deaf and Hard of Hearing Center</h2>
-          <p>501(c)(3) nonprofit &middot; Serving East Texas since 2012</p>
+        <div class="footer__brand">
+          <a class="footer__brand-link" href="${prefix}index.html">
+            <img src="${prefix}assets/logo-mark-light.svg" alt="TDHHC" width="240" height="82" class="footer__logo-mark">
+            <span class="footer__org-name">Tyler Deaf &amp; Hard of Hearing Center</span>
+          </a>
+          <p class="footer__org-meta">501(c)(3) nonprofit &middot; Serving East Texas since 2012</p>
         </div>
 $extra
         <div>

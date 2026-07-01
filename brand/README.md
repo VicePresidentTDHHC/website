@@ -31,11 +31,12 @@ These files in [`www/assets/`](../www/assets/) are copied from this kit for the 
 - `logo.svg` / `logo.png` — wide color dark (header)
 - `logo-white.svg` / `logo-white.png` — wide color light (footer)
 - `favicon.svg` / `favicon.png` — icon color dark
-- `logo-mark.svg` / `logo-mark-on-dark.svg` — wide lockup **without subtitle** (subtitle paths removed from SVG; full artboard preserved)
+- `logo-mark.svg` / `logo-mark-on-dark.svg` — wide lockup **without subtitle** from dark source (subtitle paths removed; full artboard preserved)
+- `logo-mark-light.svg` — same without subtitle from light source (EJC cream wordmark `#f8f0e5` for footer/dark backgrounds)
 - `logo-mark-navy.svg` — navy wordmark on light backgrounds (optional)
-- Regenerate with `python www/scripts/build-logo-mark.py` from `tdhhc-wide-color-dark-erstoria.svg`
+- Regenerate with `python www/scripts/build-logo-mark.py`
 
-Header uses `logo-mark-on-dark.svg` (light hands/wordmark, brand red roses) on unified chrome. Tagline is HTML text beside the mark.
+Header uses `logo-mark-on-dark.svg` (adapted light wordmark for navy chrome). Footer uses `logo-mark-light.svg` (official EJC light palette) so the board can compare treatments. Tagline is HTML text in both places, not baked into the SVG.
 
 ## Web typography (mock-up)
 
