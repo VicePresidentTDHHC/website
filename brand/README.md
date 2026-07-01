@@ -31,6 +31,9 @@ These files in [`www/assets/`](../www/assets/) are copied from this kit for the 
 - `logo.svg` / `logo.png` — wide color dark (header)
 - `logo-white.svg` / `logo-white.png` — wide color light (footer)
 - `favicon.svg` / `favicon.png` — icon color dark
+- `logo-mark.svg` / `logo-mark-navy.svg` — cropped lockup (icon + TDHHC, no subtitle); navy variant for V2 theme
+
+Header tagline (“Tyler Deaf & Hard of Hearing Center”) is HTML text beside the mark — see `build-logo-mark.py` to regenerate marks from the brand SVG.
 
 ## Web typography (mock-up)
 

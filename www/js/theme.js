@@ -1,6 +1,6 @@
 (function () {
   const STORAGE_KEY = "tdhhc-theme";
-  const DEFAULT = "v1";
+  const DEFAULT = "v2";
 
   function setTheme(id) {
     document.documentElement.setAttribute("data-theme", id);
