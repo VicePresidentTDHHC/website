@@ -1,23 +1,23 @@
-"""Build header logo marks: cropped wide lockup without subtitle band."""
+"""Build wide logo without subtitle band (vector edit, not viewBox crop)."""
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-src = (ROOT / "brand/logo/svg/tdhhc-wide-color-dark-erstoria.svg").read_text(encoding="utf-8")
+SRC = ROOT / "brand/logo/svg/tdhhc-wide-color-dark-erstoria.svg"
+BRAND_OUT = ROOT / "brand/logo/svg/tdhhc-wide-no-subtitle-erstoria.svg"
+ASSETS = ROOT / "www/assets"
 
-parts = src.split('<g clip-path="url(#_clip1)">', 1)
-if len(parts) != 2:
-    raise SystemExit("clip structure not found")
-head, body = parts
 
-m = re.search(r"(</g>)(<g>)(.*?)(</g>)(<rect id=\"tdhhc-icon)", body, re.DOTALL)
-if not m:
-    raise SystemExit("subtitle group not found")
-body = body[: m.start(2)] + body[m.end(4) :]
-
-svg = head + '<g clip-path="url(#_clip1)">' + body
-svg = svg.replace('viewBox="0 0 4117 1405"', 'viewBox="0 0 4117 980"')
-svg = svg.replace('width="4113.84" height="1400.32"', 'width="4113.84" height="980"')
+def strip_subtitle(svg: str) -> str:
+    parts = svg.split('<g clip-path="url(#_clip1)">', 1)
+    if len(parts) != 2:
+        raise SystemExit("clip structure not found")
+    head, body = parts
+    m = re.search(r"(</g>)(<g>)(.*?)(</g>)(<rect id=\"tdhhc-icon)", body, re.DOTALL)
+    if not m:
+        raise SystemExit("subtitle group not found")
+    body = body[: m.start(2)] + body[m.end(4) :]
+    return head + '<g clip-path="url(#_clip1)">' + body
 
 
 def recolor(text: str, mapping: dict[str, str]) -> str:
@@ -26,15 +26,42 @@ def recolor(text: str, mapping: dict[str, str]) -> str:
     return text
 
 
-assets = ROOT / "www/assets"
-assets.mkdir(parents=True, exist_ok=True)
-(assets / "logo-mark.svg").write_text(svg, encoding="utf-8")
+def main() -> None:
+    src = SRC.read_text(encoding="utf-8")
+    no_sub = strip_subtitle(src)
 
-navy_map = {
-    "#472d30": "#0f172a",
-    "#438c4f": "#55BAAC",
-    "#8d213d": "#C62026",
-    "#e84139": "#C62026",
-}
-(assets / "logo-mark-navy.svg").write_text(recolor(svg, navy_map), encoding="utf-8")
-print("Wrote logo-mark.svg and logo-mark-navy.svg")
+    BRAND_OUT.write_text(no_sub, encoding="utf-8")
+    ASSETS.mkdir(parents=True, exist_ok=True)
+
+    # Brand colors — for light backgrounds / reference
+    (ASSETS / "logo-mark.svg").write_text(no_sub, encoding="utf-8")
+
+    # On dark chrome: light wordmark + hands, brand red roses, teal leaves
+    on_dark = recolor(
+        no_sub,
+        {
+            "#472d30": "#f8fafc",
+            "#438c4f": "#55BAAC",
+            "#8d213d": "#C62026",
+            "#e84139": "#C62026",
+        },
+    )
+    (ASSETS / "logo-mark-on-dark.svg").write_text(on_dark, encoding="utf-8")
+
+    # Optional: navy wordmark on white (legacy theme tests)
+    on_light_navy = recolor(
+        no_sub,
+        {
+            "#472d30": "#0f172a",
+            "#438c4f": "#55BAAC",
+            "#8d213d": "#C62026",
+            "#e84139": "#C62026",
+        },
+    )
+    (ASSETS / "logo-mark-navy.svg").write_text(on_light_navy, encoding="utf-8")
+
+    print(f"Wrote {BRAND_OUT.name}, logo-mark.svg, logo-mark-on-dark.svg")
+
+
+if __name__ == "__main__":
+    main()

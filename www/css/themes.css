@@ -37,6 +37,8 @@
   --color-chrome: #2d2a28;
   --color-chrome-text: #ffffff;
   --color-chrome-muted: #e8e6e3;
+  --color-chrome-divider: rgba(255, 255, 255, 0.18);
+  --color-chrome-nav-hover: #b8f5e8;
 
   --color-banner-bg: var(--color-chrome);
   --color-banner-text: var(--color-chrome-text);
@@ -98,6 +100,8 @@
   --color-chrome: #0f172a;
   --color-chrome-text: #f8fafc;
   --color-chrome-muted: #cbd5e1;
+  --color-chrome-divider: rgba(255, 255, 255, 0.2);
+  --color-chrome-nav-hover: #fde68a;
 
   --color-banner-bg: var(--color-chrome);
   --color-banner-text: var(--color-chrome-text);
@@ -132,7 +136,7 @@
   --card-border: none;
   --radius: 0.75rem;
   --shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
-  --logo-height: 4rem;
+  --logo-height: 3.25rem;
 }
 
 [data-theme="v2"] .card {
@@ -183,6 +187,8 @@
   --color-chrome: #58181f;
   --color-chrome-text: #ffffff;
   --color-chrome-muted: #fff8e6;
+  --color-chrome-divider: rgba(255, 255, 255, 0.22);
+  --color-chrome-nav-hover: #fde68a;
 
   --color-banner-bg: var(--color-chrome);
   --color-banner-text: var(--color-chrome-text);
