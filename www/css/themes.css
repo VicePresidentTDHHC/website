@@ -63,7 +63,7 @@
   --hero-text: #ffffff;
   --hero-lead: #e8e6e3;
   --hero-padding: 3.5rem 1.25rem;
-  --hero-title-width: 22ch;
+  --hero-title-width: min(38rem, 100%);
 
   --color-notice-bg: #fff8e6;
   --color-notice-border: #b45309;
@@ -126,7 +126,7 @@
   --hero-text: #ffffff;
   --hero-lead: #cbd5e1;
   --hero-padding: 4rem 1.25rem;
-  --hero-title-width: 18ch;
+  --hero-title-width: min(38rem, 100%);
 
   --color-notice-bg: #fffbeb;
   --color-notice-border: #b45309;
@@ -213,7 +213,7 @@
   --hero-text: #ffffff;
   --hero-lead: #fff8e6;
   --hero-padding: 3rem 1.25rem;
-  --hero-title-width: 22ch;
+  --hero-title-width: min(38rem, 100%);
 
   --color-notice-bg: #fff8e6;
   --color-notice-border: #b45309;

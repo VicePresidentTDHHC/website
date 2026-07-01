@@ -322,6 +322,7 @@ main {
 .hero h1 {
   max-width: var(--hero-title-width);
   color: var(--hero-text);
+  line-height: 1.35;
 }
 
 .hero .lead {
