@@ -42,7 +42,8 @@ Header uses `logo-mark-on-dark.svg` (adapted light wordmark for navy chrome). Fo
 
 Erstoria is self-hosted in [`www/assets/fonts/`](../www/assets/fonts/) and loaded via [`www/css/fonts.css`](../www/css/fonts.css):
 
-- **H1 / hero titles** — Erstoria (40px max)
+- **H1 / short hero line** — Erstoria (40px max)
+- **Long hero subline** — Atkinson bold (home page splits the tagline)
 - **H2** — Atkinson Hyperlegible bold (32px; stands in for Optima until web license)
 - **Body** — Atkinson Hyperlegible (16px)
 - **`.callout`** — Erstoria uppercase (24px)
