@@ -213,13 +213,13 @@ summary:focus-visible {
 }
 
 .logo__tagline {
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1.45;
-  letter-spacing: 0.01em;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: var(--color-chrome-muted);
-  max-width: 13rem;
+  max-width: 12rem;
 }
 
 .logo img {
@@ -319,29 +319,12 @@ main {
   z-index: 1;
 }
 
-.hero__title {
+.hero h1 {
   max-width: var(--hero-title-width);
-  margin: 0 0 1rem;
   color: var(--hero-text);
-}
-
-.hero__title-main {
-  display: block;
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  line-height: 1.25;
-  letter-spacing: var(--heading-tracking);
-}
-
-.hero__title-rest {
-  display: block;
-  margin-top: 0.5rem;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: clamp(1.375rem, 2.5vw, 1.75rem);
-  line-height: 1.45;
-  letter-spacing: 0;
+  line-height: 1.6;
+  padding-block-end: 0.125em;
 }
 
 .hero .lead {

@@ -1,10 +1,9 @@
 @font-face {
   font-family: "Erstoria";
-  src: url("../assets/fonts/Erstoria.otf") format("opentype");
+  src:
+    url("../assets/fonts/Erstoria.woff2") format("woff2"),
+    url("../assets/fonts/Erstoria.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  /* Web metrics — OTF descenders extend past built-in line box */
-  descent-override: 38%;
-  line-gap-override: 12%;
 }
