@@ -136,7 +136,7 @@
   --card-border: none;
   --radius: 0.75rem;
   --shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
-  --logo-height: 3.25rem;
+  --logo-height: 4.25rem;
 }
 
 [data-theme="v2"] .card {
