@@ -1,11 +1,8 @@
 # Deploy www/ to InterServer whenever master changes.
-# Requires GitHub repo secrets (Settings → Secrets and variables → Actions):
-#   FTP_SERVER      — e.g. ftp.tdhhc.org or the IP from InterServer
-#   FTP_USERNAME    — FTP user from InterServer FTP Manager
-#   FTP_PASSWORD    — that user's password
+# Settings → Secrets and variables → Actions:
+#   Variables: FTP_SERVER (HOST_IP), FTP_USERNAME (TDHHCORG_USER_NAME)
+#   Secrets:   FTP_PASSWORD (TDHHCORG_PW)
 # Does NOT change DNS. Live tdhhc.org stays on the old host until the Board votes.
-# If InterServer’s docroot is not public_html, change server-dir below
-# (e.g. ./domains/tdhhc.org/public_html/).
 
 name: Deploy www to InterServer
 
@@ -33,8 +30,8 @@ jobs:
       - name: Sync www/ to InterServer
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ vars.FTP_SERVER }}
+          username: ${{ vars.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./www/
           server-dir: ./public_html/
