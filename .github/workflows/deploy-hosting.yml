@@ -1,7 +1,6 @@
 # Deploy www/ to Hosting.com whenever master changes.
-# Settings → Secrets and variables → Actions:
-#   Variables: FTP_SERVER, FTP_USERNAME
-#   Secrets:   FTP_PASSWORD
+# Settings → Secrets and variables → Actions → Secrets:
+#   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
 # Get these from https://my.hosting.com → site → Manage → FTP Accounts / Site Information.
 # Does NOT change DNS. Live tdhhc.org stays on the old host until the Board votes.
 
@@ -31,8 +30,8 @@ jobs:
       - name: Sync www/ to Hosting.com
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ vars.FTP_SERVER }}
-          username: ${{ vars.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./www/
           server-dir: ./public_html/
