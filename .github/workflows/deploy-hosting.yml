@@ -1,7 +1,8 @@
 # Deploy www/ to Hosting.com whenever master changes.
 # Settings → Secrets and variables → Actions → Secrets:
 #   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
-# Get these from https://my.hosting.com → site → Manage → FTP Accounts / Site Information.
+# FTP home is /home/aslexpre/public_html/tdhhc_mockup (https://aslexpress.net/tdhhc_mockup/).
+# FTP_SERVER must be origin IP 75.98.175.84 (not Cloudflare ftp.aslexpress.net).
 # Does NOT change DNS. Live tdhhc.org stays on the old host until the Board votes.
 
 name: Deploy www to Hosting.com
@@ -34,6 +35,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./www/
-          server-dir: ./public_html/
+          server-dir: ./
           protocol: ftp
           timeout: 60000

@@ -1,0 +1,39 @@
+# Hosting.com / cPanel — FTP account for TDHHC mockup deploy
+# Paste into: my.hosting.com → site → Manage → FTP Accounts → Add FTP Account
+# (or Edit whitneyscott@aslexpress.net)
+
+# --- Account ---
+Username: tdhhc-deploy
+# Full login becomes: tdhhc-deploy@aslexpress.net
+
+Password: CHANGE_ME_TO_A_STRONG_PASSWORD
+
+# --- Directory ---
+# The panel prefixes: /home/aslexpre/
+# So in the Directory box, enter ONLY the part AFTER that prefix:
+
+Directory: public_html/tdhhc_mockup
+
+# Full path on server will be:
+#   /home/aslexpre/public_html/tdhhc_mockup
+# That folder is what serves:
+#   https://aslexpress.net/tdhhc_mockup/
+
+# If public_html/tdhhc_mockup is not offered / doesn't exist yet, enter:
+#   public_html
+# (full path: /home/aslexpre/public_html)
+# Then tell Cursor — deploy server-dir will be ./tdhhc_mockup/
+
+# Quota: Unlimited (or leave default)
+
+# --- After create, send Cursor ---
+# FTP_SERVER=75.98.175.84
+# FTP_USERNAME=tdhhc-deploy@aslexpress.net
+# FTP_PASSWORD=<password you set>
+# (If Directory was public_html/tdhhc_mockup → Actions server-dir: ./)
+# (If Directory was public_html           → Actions server-dir: ./tdhhc_mockup/)
+
+# --- Or edit existing account ---
+# Account: whitneyscott@aslexpress.net
+# Directory: public_html/tdhhc_mockup
+# (panel shows /home/aslexpre/ + what you type)
