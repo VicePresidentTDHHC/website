@@ -239,3 +239,83 @@
   background: #fff8e6;
   color: #58181f;
 }
+
+/* ═══════════════════════════════════════════
+   V4 — Forest (deep green chrome, amber accents)
+   ═══════════════════════════════════════════ */
+[data-theme="v4"] {
+  --color-bg: #f7faf8;
+  --color-text: #0a1a12;
+  --color-muted: #355045;
+  --color-border: #a8c5b5;
+  --color-surface: #e8f3ed;
+  --color-card-bg: #ffffff;
+
+  --color-accent: #1b5e3a;
+  --color-accent-hover: #154a2e;
+  --color-accent-text: #ffffff;
+
+  --color-link: #1b5e3a;
+  --color-link-hover: #154a2e;
+  --color-nav-accent: #1b5e3a;
+
+  --color-chrome: #1b3a2a;
+  --color-chrome-text: #ffffff;
+  --color-chrome-muted: #c5e0d2;
+  --color-chrome-divider: rgba(255, 255, 255, 0.2);
+  --color-chrome-nav-hover: #fcd34d;
+
+  --color-banner-bg: var(--color-chrome);
+  --color-banner-text: var(--color-chrome-text);
+
+  --color-contact-bar-bg: var(--color-chrome);
+  --color-contact-bar-text: #c5e0d2;
+
+  --color-header-bg: #ffffff;
+  --header-border: none;
+  --header-shadow: 0 4px 24px rgba(27, 58, 42, 0.12);
+
+  --color-footer-bg: var(--color-chrome);
+  --color-footer-text: #d4e8dc;
+  --color-footer-heading: #fcd34d;
+  --color-footer-link: #fbbf24;
+  --color-footer-link-hover: #ffffff;
+  --color-footer-divider: rgba(255, 255, 255, 0.2);
+
+  --hero-bg: linear-gradient(125deg, #1b3a2a 0%, #2d6a4f 50%, #1b3a2a 100%);
+  --hero-bg-solid: #1b3a2a;
+  --hero-overlay: linear-gradient(90deg, rgba(252, 211, 77, 0.08) 0%, transparent 45%);
+  --hero-text: #ffffff;
+  --hero-lead: #c5e0d2;
+  --hero-padding: 4rem 1.25rem;
+  --hero-title-width: min(38rem, 100%);
+
+  --color-notice-bg: #fffbeb;
+  --color-notice-border: #b45309;
+  --color-info-bg: #ecf6ef;
+  --color-info-border: #1b5e3a;
+
+  --card-border: none;
+  --radius: 0.625rem;
+  --shadow: 0 6px 24px rgba(27, 58, 42, 0.1);
+  --logo-height: 4.25rem;
+}
+
+[data-theme="v4"] .card {
+  border-top: 4px solid var(--color-chrome);
+}
+
+[data-theme="v4"] .hero .btn--primary {
+  background: #fcd34d;
+  color: #1b3a2a;
+}
+
+[data-theme="v4"] .hero .btn--primary:hover {
+  background: #fde68a;
+  color: #1b3a2a;
+}
+
+[data-theme="v4"] .tier {
+  border-color: #fcd34d;
+  background: #fffbeb;
+}
