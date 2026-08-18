@@ -1,4 +1,4 @@
-﻿# INTERPRETER SERVICES
+# INTERPRETER SERVICES
 
 - **URL:** https://tdhhc.org/interpreter-services/
 - **Last modified:** 2025-11-18T00:27:45

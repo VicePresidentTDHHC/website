@@ -1,4 +1,4 @@
-﻿# CALENDAR
+# CALENDAR
 
 - **URL:** https://tdhhc.org/calendar/
 - **Last modified:** 2023-05-14T17:41:03

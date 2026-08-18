@@ -1,4 +1,4 @@
-﻿# B.O.D.
+# B.O.D.
 
 - **URL:** https://tdhhc.org/b-o-d/
 - **Last modified:** 2026-02-17T18:24:29

@@ -1,4 +1,4 @@
-﻿# DONATE
+# DONATE
 
 - **URL:** https://tdhhc.org/donate/
 - **Last modified:** 2026-02-17T18:24:55

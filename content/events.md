@@ -1,4 +1,4 @@
-﻿# Events
+# Events
 
 - **URL:** https://tdhhc.org/events/
 - **Last modified:** 2026-03-27T16:06:31

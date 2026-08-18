@@ -1,4 +1,4 @@
-﻿# RESOURCES
+# RESOURCES
 
 - **URL:** https://tdhhc.org/resources/
 - **Last modified:** 2026-02-17T18:29:03

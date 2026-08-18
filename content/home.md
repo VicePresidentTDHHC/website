@@ -1,4 +1,4 @@
-﻿# HOME
+# HOME
 
 - **URL:** https://tdhhc.org/
 - **Last modified:** 2026-03-27T16:06:05

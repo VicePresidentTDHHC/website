@@ -1,4 +1,4 @@
-﻿# PLACES OF WORSHIP
+# PLACES OF WORSHIP
 
 - **URL:** https://tdhhc.org/places-of-worship/
 - **Last modified:** 2023-05-14T01:49:52

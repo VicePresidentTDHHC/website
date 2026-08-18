@@ -1,4 +1,4 @@
-﻿# CONTACT
+# CONTACT
 
 - **URL:** https://tdhhc.org/contact/
 - **Last modified:** 2025-11-17T21:32:55
