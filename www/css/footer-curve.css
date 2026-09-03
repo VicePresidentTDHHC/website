@@ -31,6 +31,9 @@
 .site-footer a {
   color: var(--color-footer-link);
   font-weight: 600;
+  /* Underline so links are not color-only (WCAG 1.4.1; amber vs body text is <3:1) */
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .site-footer a:hover {
@@ -51,6 +54,11 @@
   gap: 0.75rem;
   text-decoration: none;
   color: inherit;
+}
+
+.footer__brand-link .footer__org-name {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .footer__brand-link:hover .footer__org-name {
@@ -105,11 +113,4 @@
 
 .footer__host-credit {
   color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
-
-.footer__host-credit:hover,
-.footer__host-credit:focus-visible {
-  opacity: 0.9;
 }
