@@ -47,6 +47,12 @@
       <a class="btn btn--primary" href="https://www.zeffy.com/en-US/ticketing/subscribe-to-tyler-deaf-and-hard-of-hearing-centers-monthly-newsletter" rel="noopener">Email newsletter signup</a>
     </div>
 
+    <div class="btn-row" role="group" aria-label="Calendar export">
+      <a class="btn btn--primary" href="../assets/calendars/tdhhc-events.ics" download="tdhhc-events.ics">Download calendar (.ics)</a>
+      <a class="btn btn--primary" id="calendar-subscribe" href="../assets/calendars/tdhhc-events.ics">Subscribe in Outlook / Apple / Google</a>
+    </div>
+    <p class="newsletter-viewer__fallback">Download adds these events once. Subscribe keeps a live link to this feed (best when the site URL is stable). Works with Outlook, Apple Calendar, and Google Calendar.</p>
+
     <h2>Upcoming events</h2>
     <p class="notice notice--info">Deaf chats are hosted by East Texas Deaf Association. Questions: text Daphne Smith (President) at <a href="tel:+19035713491">903-571-3491</a>.</p>
 
@@ -330,5 +336,13 @@
     </div>
   </footer>
   <script src="../js/main.js"></script>
+  <script>
+    (function () {
+      var link = document.getElementById("calendar-subscribe");
+      if (!link) return;
+      var absolute = new URL("../assets/calendars/tdhhc-events.ics", window.location.href);
+      link.href = "webcal://" + absolute.host + absolute.pathname;
+    })();
+  </script>
 </body>
 </html>

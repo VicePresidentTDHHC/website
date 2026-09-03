@@ -1,0 +1,2 @@
+# Serve calendar feed with the correct MIME type (Outlook / Apple / Google)
+AddType text/calendar .ics

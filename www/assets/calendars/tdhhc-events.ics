@@ -1,0 +1,208 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TDHHC//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:TDHHC Events
+X-WR-TIMEZONE:America/Chicago
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+X-LIC-LOCATION:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:smith-county-commissioners@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260901T093000
+DTEND;TZID=America/Chicago:20260901T110000
+SUMMARY:Smith County Commissioners Court
+LOCATION:Court Annex Bldg.\, 200 E Ferguson St.\, Tyler\, TX 75701
+DESCRIPTION:MUST RSVP. No sleeveless shirts/dress. TDHHC September 202
+ 6 newsletter.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:asl-storytime-lindale@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260904T090000
+DTEND;TZID=America/Chicago:20260904T103000
+SUMMARY:ASL Story Time (Lindale)
+LOCATION:Lillie Russell Memorial Library\, 200 E Hubbard St.\, Lindale
+ \, TX 75771
+DESCRIPTION:From TDHHC September 2026 newsletter.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:tyler-deaf-chat@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260904T180000
+DTEND;TZID=America/Chicago:20260904T200000
+SUMMARY:Tyler Deaf Chat
+LOCATION:Rounders\, 1400 W Southwest Loop 323\, Tyler\, TX 75701
+DESCRIPTION:Hosted by East Texas Deaf Association. Questions: text Dap
+ hne Smith 903-571-3491.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:asl-storytime-tyler@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260905T103000
+DTEND;TZID=America/Chicago:20260905T113000
+SUMMARY:ASL Story Time (Tyler)
+LOCATION:Tyler Public Library\, 201 S College Ave.\, Tyler\, TX 75702 
+ (3rd floor Makerspace)
+DESCRIPTION:From TDHHC September 2026 newsletter.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:pickleball@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260905T160000
+DTEND;TZID=America/Chicago:20260905T180000
+SUMMARY:Pickleball
+LOCATION:Pollard Park\, 710 E Amherst Dr.\, Tyler\, TX 75701
+DESCRIPTION:Bring your own paddles and balls. Optional: Raising Cane's
+  after at 6:00 PM.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:deaf-senior-humo@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260910T110000
+DTEND;TZID=America/Chicago:20260910T123000
+SUMMARY:Deaf Senior Luncheon — Humo
+LOCATION:Humo\, 6899 Oak Hill Blvd.\, Tyler\, TX 75703
+DESCRIPTION:Part of Deaf Senior Luncheon & Museum Tour. Free museum to
+ ur at 1:00 PM at Brookshire's Wildlife Museum.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:deaf-senior-museum@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260910T130000
+DTEND;TZID=America/Chicago:20260910T150000
+SUMMARY:Deaf Senior Museum Tour — Brookshire's Wildlife Museum
+LOCATION:Brookshire's Wildlife Museum\, 6970 Arbor Ridge Dr.\, Tyler\,
+  TX 75703
+DESCRIPTION:Free. Part of Deaf Senior Luncheon & Museum Tour (Humo at 
+ 11:00 AM).
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:longview-deaf-chat@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260911T180000
+DTEND;TZID=America/Chicago:20260911T200000
+SUMMARY:Longview Deaf Chat
+LOCATION:Applebee's\, 5502 S Broadway Ave.\, Tyler\, TX 75703
+DESCRIPTION:Hosted by East Texas Deaf Association. Questions: text Dap
+ hne Smith 903-571-3491.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:deaf-owned-business-expo@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260912T100000
+DTEND;TZID=America/Chicago:20260912T140000
+SUMMARY:Deaf Owned Business Expo
+LOCATION:TDHHC Community Room\, 1828 ESE Loop 323\, Suite LL-14\, Tyle
+ r\, TX 75701
+DESCRIPTION:See flyer for details. From TDHHC September 2026 newsletter.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:deaf-bowling@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260912T160000
+DTEND;TZID=America/Chicago:20260912T180000
+SUMMARY:Deaf Bowling Game
+LOCATION:Green Acres Bowling\, 2311 ESE Loop 323\, Tyler\, TX
+DESCRIPTION:After: CiCi's Pizza\, 1938 Southeast Loop 323\, Tyler\, TX.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:tdhhc-fundraiser@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260915T170000
+DTEND;TZID=America/Chicago:20260915T210000
+SUMMARY:TDHHC Fundraiser
+LOCATION:Parry's Pizzeria\, 3314 Troup Hwy\, Tyler\, TX
+DESCRIPTION:TDHHC fundraiser. From September 2026 newsletter.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:lindale-deaf-chat@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260918T180000
+DTEND;TZID=America/Chicago:20260918T200000
+SUMMARY:Lindale Deaf Chat
+LOCATION:Wingstop\, 2553 S Main St.\, Bldg D\, Lindale\, TX 75771
+DESCRIPTION:Hosted by East Texas Deaf Association. Questions: text Dap
+ hne Smith 903-571-3491.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:volleyball-social@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260919T183000
+DTEND;TZID=America/Chicago:20260919T203000
+SUMMARY:Volleyball & Social
+LOCATION:Sonic\, 102 N Northeast Loop 323\, Tyler\, TX
+DESCRIPTION:From TDHHC September 2026 newsletter.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:senior-health-expo@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260922T090000
+DTEND;TZID=America/Chicago:20260922T160000
+SUMMARY:Senior Health & Living Expo
+LOCATION:Brookshire Conference Center\, 2000 W Front Street\, Tyler\, 
+ TX 75702
+DESCRIPTION:Free admission. From TDHHC September 2026 newsletter.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ice-cream-social@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260925T190000
+DTEND;TZID=America/Chicago:20260925T220000
+SUMMARY:Deaf Ice Cream Social
+LOCATION:Marble Slab Creamery\, 4915 S Broadway Ave.\, Tyler\, TX 75703
+DESCRIPTION:From TDHHC September 2026 newsletter.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:asl-bingo@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20260929T183000
+DTEND;TZID=America/Chicago:20260929T210000
+SUMMARY:ASL Bingo Night
+LOCATION:TJC Apache Rooms\, 1401 E Lake St.\, Tyler\, TX
+DESCRIPTION:Entry $10. See flyer for details.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:deaf-day-state-fair@tdhhc.org
+DTSTAMP:20260903T121042Z
+DTSTART;TZID=America/Chicago:20261003T100000
+DTEND;TZID=America/Chicago:20261003T170000
+SUMMARY:Deaf Day — East Texas State Fair
+LOCATION:204 Patton Lane\, Tyler\, TX
+DESCRIPTION:See flyer for details. From TDHHC September 2026 newsletter.
+URL:https://tdhhc.org/services/events.html
+END:VEVENT
+END:VCALENDAR
