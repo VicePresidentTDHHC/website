@@ -1,11 +1,10 @@
-# Deploy www/ to Hosting.com whenever master changes.
+# Deploy www/ to InterServer whenever master changes.
 # Settings → Secrets and variables → Actions → Secrets:
 #   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
-# FTP home is /home/aslexpre/public_html/tdhhc_mockup (https://aslexpress.net/tdhhc_mockup/).
-# FTP_SERVER must be origin IP 75.98.175.84 (not Cloudflare ftp.aslexpress.net).
-# Does NOT change DNS. Live tdhhc.org stays on the old host until the Board votes.
+# Host: vda8600.is.cc  User: tdhhcorg  Path: ./public_html/
+# Bolt → GitHub master → this workflow → InterServer.
 
-name: Deploy www to Hosting.com
+name: Deploy www to InterServer
 
 on:
   push:
@@ -13,11 +12,11 @@ on:
       - master
     paths:
       - "www/**"
-      - ".github/workflows/deploy-hosting.yml"
+      - ".github/workflows/deploy-interserver.yml"
   workflow_dispatch:
 
 concurrency:
-  group: deploy-hosting
+  group: deploy-interserver
   cancel-in-progress: true
 
 jobs:
@@ -28,13 +27,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Sync www/ to Hosting.com
+      - name: Sync www/ to InterServer
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./www/
-          server-dir: ./
+          server-dir: ./public_html/
           protocol: ftp
           timeout: 60000
