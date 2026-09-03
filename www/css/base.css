@@ -9,6 +9,8 @@
 html {
   font-size: 100%;
   scroll-behavior: smooth;
+  /* Offset sticky .site-chrome so in-page anchors (e.g. calendar → event) land correctly */
+  scroll-padding-top: calc(var(--logo-height, 4.25rem) + 5.25rem);
 }
 
 body {
