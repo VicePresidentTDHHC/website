@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Subscribe to TDHHC email or paper newsletters.">
+  <meta name="description" content="Read and download the current TDHHC newsletter, or subscribe by email or paper.">
   <title>Newsletter | TDHHC</title>
   <link rel="stylesheet" href="../css/main.css">
   <link rel="icon" href="../assets/logo.png">
@@ -37,13 +37,34 @@
     </div>
   </header>
 
-  <main id="main" class="container container--narrow">
+  <main id="main" class="container">
     <h1>Newsletter</h1>
     <p class="lead">Monthly updates on TDHHC events, programs, and community news.</p>
-    <div class="btn-row">
-      <a class="btn btn--primary" href="https://www.zeffy.com/en-US/ticketing/subscribe-to-tyler-deaf-and-hard-of-hearing-centers-monthly-newsletter" rel="noopener">Email newsletter (Zeffy)</a>
-      <a class="btn btn--primary" href="https://www.zeffy.com/en-US/ticketing/subscribe-to-tdhhcs-paper-monthly-newsletter" rel="noopener">Paper newsletter (Zeffy)</a>
-    </div>
+
+    <section class="newsletter-current" aria-labelledby="current-newsletter-heading">
+      <h2 id="current-newsletter-heading">September newsletter</h2>
+      <p>Read the current issue below, or download the PDF.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="../assets/newsletters/tdhhc-september-newsletter.pdf" download="TDHHC-September-newsletter.pdf">Download PDF</a>
+        <a class="btn btn--primary" href="../assets/newsletters/tdhhc-september-newsletter.pdf" target="_blank" rel="noopener">Open in new tab</a>
+      </div>
+      <div class="newsletter-viewer">
+        <iframe
+          title="TDHHC September newsletter"
+          src="../assets/newsletters/tdhhc-september-newsletter.pdf"
+          loading="lazy"></iframe>
+      </div>
+      <p class="newsletter-viewer__fallback">If the preview does not load, <a href="../assets/newsletters/tdhhc-september-newsletter.pdf" download="TDHHC-September-newsletter.pdf">download the PDF</a>.</p>
+    </section>
+
+    <section class="newsletter-subscribe" aria-labelledby="subscribe-heading">
+      <h2 id="subscribe-heading">Subscribe</h2>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="https://www.zeffy.com/en-US/ticketing/subscribe-to-tyler-deaf-and-hard-of-hearing-centers-monthly-newsletter" rel="noopener">Email newsletter (Zeffy)</a>
+        <a class="btn btn--primary" href="https://www.zeffy.com/en-US/ticketing/subscribe-to-tdhhcs-paper-monthly-newsletter" rel="noopener">Paper newsletter (Zeffy)</a>
+      </div>
+    </section>
+
     <p><a href="donate.html">← Support TDHHC</a></p>
   </main>
 
