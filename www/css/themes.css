@@ -13,237 +13,9 @@
 }
 
 /* ═══════════════════════════════════════════
-   V1 — High-contrast slate
-   Neutral chrome top & bottom (no red)
+   Forest — deep green chrome, amber accents
    ═══════════════════════════════════════════ */
-:root,
-[data-theme="v1"] {
-  --color-bg: #fafaf8;
-  --color-text: #0a0a0a;
-  --color-muted: #3d3d3d;
-  --color-border: #c4c4c4;
-  --color-surface: #f0f0ee;
-  --color-card-bg: #ffffff;
-
-  --color-accent: #0c5c6e;
-  --color-accent-hover: #084555;
-  --color-accent-text: #ffffff;
-
-  --color-link: #0c5c6e;
-  --color-link-hover: #084555;
-  --color-nav-accent: #0c5c6e;
-
-  /* Unified chrome — contact bar, banner, footer band */
-  --color-chrome: #2d2a28;
-  --color-chrome-text: #ffffff;
-  --color-chrome-muted: #e8e6e3;
-  --color-chrome-divider: rgba(255, 255, 255, 0.18);
-  --color-chrome-nav-hover: #b8f5e8;
-
-  --color-banner-bg: var(--color-chrome);
-  --color-banner-text: var(--color-chrome-text);
-
-  --color-contact-bar-bg: var(--color-chrome);
-  --color-contact-bar-text: var(--color-chrome-text);
-
-  --color-header-bg: #ffffff;
-  --header-border: 2px solid #d4d4d4;
-  --header-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-
-  --color-footer-bg: var(--color-chrome);
-  --color-footer-text: var(--color-chrome-text);
-  --color-footer-heading: #ffffff;
-  --color-footer-link: #b8f5e8;
-  --color-footer-link-hover: #ffffff;
-  --color-footer-divider: rgba(255, 255, 255, 0.25);
-
-  --hero-bg: linear-gradient(145deg, #3d3a38 0%, #2d2a28 100%);
-  --hero-bg-solid: #2d2a28;
-  --hero-overlay: none;
-  --hero-text: #ffffff;
-  --hero-lead: #e8e6e3;
-  --hero-padding: 3.5rem 1.25rem;
-  --hero-title-width: min(38rem, 100%);
-
-  --color-notice-bg: #fff8e6;
-  --color-notice-border: #b45309;
-  --color-info-bg: #e8f4fc;
-  --color-info-border: #0c5c6e;
-
-  --card-border: 2px solid #d4d4d4;
-  --radius: 0.5rem;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --logo-height: 4.5rem;
-}
-
-/* ═══════════════════════════════════════════
-   V2 — Navy & gold
-   Unified navy chrome
-   ═══════════════════════════════════════════ */
-[data-theme="v2"] {
-  --color-bg: #f8fafc;
-  --color-text: #0a0f1a;
-  --color-muted: #334155;
-  --color-border: #94a3b8;
-  --color-surface: #eef2f7;
-  --color-card-bg: #ffffff;
-
-  --color-accent: #0f172a;
-  --color-accent-hover: #1e3a5f;
-  --color-accent-text: #ffffff;
-
-  /* Links: blue — accent is navy/gold buttons */
-  --color-link: #1d4ed8;
-  --color-link-hover: #1e3a8a;
-  --color-nav-accent: #1d4ed8;
-
-  --color-chrome: #0f172a;
-  --color-chrome-text: #f8fafc;
-  --color-chrome-muted: #cbd5e1;
-  --color-chrome-divider: rgba(255, 255, 255, 0.2);
-  --color-chrome-nav-hover: #fde68a;
-
-  --color-banner-bg: var(--color-chrome);
-  --color-banner-text: var(--color-chrome-text);
-
-  --color-contact-bar-bg: var(--color-chrome);
-  --color-contact-bar-text: #fde68a;
-
-  --color-header-bg: #ffffff;
-  --header-border: none;
-  --header-shadow: 0 4px 24px rgba(15, 23, 42, 0.1);
-
-  --color-footer-bg: var(--color-chrome);
-  --color-footer-text: #e2e8f0;
-  --color-footer-heading: #fde68a;
-  --color-footer-link: #fcd34d;
-  --color-footer-link-hover: #ffffff;
-  --color-footer-divider: rgba(255, 255, 255, 0.2);
-
-  --hero-bg: linear-gradient(120deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
-  --hero-bg-solid: #0f172a;
-  --hero-overlay: linear-gradient(90deg, rgba(251, 191, 36, 0.1) 0%, transparent 45%);
-  --hero-text: #ffffff;
-  --hero-lead: #cbd5e1;
-  --hero-padding: 4rem 1.25rem;
-  --hero-title-width: min(38rem, 100%);
-
-  --color-notice-bg: #fffbeb;
-  --color-notice-border: #b45309;
-  --color-info-bg: #eff6ff;
-  --color-info-border: #1d4ed8;
-
-  --card-border: none;
-  --radius: 0.75rem;
-  --shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
-  --logo-height: 4.25rem;
-}
-
-[data-theme="v2"] .card {
-  border-top: 4px solid var(--color-chrome);
-}
-
-[data-theme="v2"] .hero .btn--primary {
-  background: #fbbf24;
-  color: #0f172a;
-}
-
-[data-theme="v2"] .hero .btn--primary:hover {
-  background: #fde68a;
-  color: #0f172a;
-}
-
-[data-theme="v2"] .hero h1 {
-  font-weight: 400;
-}
-
-[data-theme="v2"] .tier {
-  border-color: #fde68a;
-  background: #fffbeb;
-}
-
-/* ═══════════════════════════════════════════
-   V3 — Wine (brand-red chrome, non-red links)
-   SVG curve + unified wine chrome
-   ═══════════════════════════════════════════ */
-[data-theme="v3"] {
-  --color-bg: #fffaf9;
-  --color-text: #1a0a0c;
-  --color-muted: #4a2828;
-  --color-border: #d4a5a5;
-  --color-surface: #fce8e8;
-  --color-card-bg: #ffffff;
-
-  /* Buttons — wine chrome on content; gold on hero */
-  --color-accent: #58181f;
-  --color-accent-hover: #622f22;
-  --color-accent-text: #ffffff;
-
-  /* Body/nav links: blue on cream (never red) */
-  --color-link: #1e40af;
-  --color-link-hover: #1e3a8a;
-  --color-nav-accent: #1e40af;
-
-  --color-chrome: #58181f;
-  --color-chrome-text: #ffffff;
-  --color-chrome-muted: #fff8e6;
-  --color-chrome-divider: rgba(255, 255, 255, 0.22);
-  --color-chrome-nav-hover: #fde68a;
-
-  --color-banner-bg: var(--color-chrome);
-  --color-banner-text: var(--color-chrome-text);
-
-  --color-contact-bar-bg: var(--color-chrome);
-  --color-contact-bar-text: #ffffff;
-
-  --color-header-bg: #ffffff;
-  --header-border: 3px solid #622f22;
-  --header-shadow: none;
-
-  --color-footer-bg: var(--color-chrome);
-  --color-footer-text: #ffffff;
-  --color-footer-heading: #ffffff;
-  --color-footer-link: #fde68a;
-  --color-footer-link-hover: #ffffff;
-  --color-footer-divider: rgba(255, 255, 255, 0.28);
-
-  --hero-bg: linear-gradient(145deg, #622f22 0%, #58181f 55%, #3d1015 100%);
-  --hero-bg-solid: #58181f;
-  --hero-overlay: none;
-  --hero-text: #ffffff;
-  --hero-lead: #fff8e6;
-  --hero-padding: 3rem 1.25rem;
-  --hero-title-width: min(38rem, 100%);
-
-  --color-notice-bg: #fff8e6;
-  --color-notice-border: #b45309;
-  --color-info-bg: #fce8e8;
-  --color-info-border: #1e40af;
-
-  --card-border: 1px solid #e8b4b4;
-  --radius: 0.375rem;
-  --shadow: 0 4px 16px rgba(88, 24, 31, 0.12);
-  --logo-height: 4.25rem;
-}
-
-[data-theme="v3"] .hero h1 {
-  font-weight: 400;
-}
-
-[data-theme="v3"] .hero .btn--primary {
-  background: #fde68a;
-  color: #58181f;
-}
-
-[data-theme="v3"] .hero .btn--primary:hover {
-  background: #fff8e6;
-  color: #58181f;
-}
-
-/* ═══════════════════════════════════════════
-   V4 — Forest (deep green chrome, amber accents)
-   ═══════════════════════════════════════════ */
-[data-theme="v4"] {
+:root {
   --color-bg: #f7faf8;
   --color-text: #0a1a12;
   --color-muted: #355045;
@@ -264,9 +36,6 @@
   --color-chrome-muted: #c5e0d2;
   --color-chrome-divider: rgba(255, 255, 255, 0.2);
   --color-chrome-nav-hover: #fcd34d;
-
-  --color-banner-bg: var(--color-chrome);
-  --color-banner-text: var(--color-chrome-text);
 
   --color-contact-bar-bg: var(--color-chrome);
   --color-contact-bar-text: #c5e0d2;
@@ -301,21 +70,21 @@
   --logo-height: 4.25rem;
 }
 
-[data-theme="v4"] .card {
+.card {
   border-top: 4px solid var(--color-chrome);
 }
 
-[data-theme="v4"] .hero .btn--primary {
+.hero .btn--primary {
   background: #fcd34d;
   color: #1b3a2a;
 }
 
-[data-theme="v4"] .hero .btn--primary:hover {
+.hero .btn--primary:hover {
   background: #fde68a;
   color: #1b3a2a;
 }
 
-[data-theme="v4"] .tier {
+.tier {
   border-color: #fcd34d;
   background: #fffbeb;
 }
