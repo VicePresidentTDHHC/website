@@ -135,6 +135,37 @@ summary:focus-visible {
   font-weight: 600;
 }
 
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: inherit;
+  border: 2px solid currentColor;
+  border-radius: var(--radius);
+  padding: 0.3rem 0.7rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  margin-left: 0.5rem;
+}
+
+.theme-toggle:hover {
+  background: currentColor;
+}
+
+.theme-toggle:hover .theme-toggle__label {
+  filter: invert(1);
+}
+
+.theme-toggle__icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
 .site-chrome__bar {
   display: flex;
   align-items: center;

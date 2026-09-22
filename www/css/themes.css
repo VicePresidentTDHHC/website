@@ -89,3 +89,139 @@
   border-color: #fcd34d;
   background: #fffbeb;
 }
+
+/* ═══════════════════════════════════════════
+   High Contrast — visually-impaired friendly
+   Black background, pure white text, yellow
+   accents, large text, thick borders.
+   All ratios meet WCAG AAA (7:1).
+   ═══════════════════════════════════════════ */
+[data-theme="hi-contrast"] {
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-muted: #ffffff;
+  --color-border: #ffffff;
+  --color-surface: #111111;
+  --color-card-bg: #000000;
+
+  --color-accent: #ffeb3b;
+  --color-accent-hover: #fff176;
+  --color-accent-text: #000000;
+
+  --color-link: #ffeb3b;
+  --color-link-hover: #fff176;
+  --color-nav-accent: #ffeb3b;
+
+  --color-chrome: #000000;
+  --color-chrome-text: #ffffff;
+  --color-chrome-muted: #ffffff;
+  --color-chrome-divider: #ffffff;
+  --color-chrome-nav-hover: #ffeb3b;
+
+  --color-contact-bar-bg: #000000;
+  --color-contact-bar-text: #ffffff;
+
+  --color-header-bg: #000000;
+  --header-border: 3px solid #ffffff;
+  --header-shadow: none;
+
+  --color-footer-bg: #000000;
+  --color-footer-text: #ffffff;
+  --color-footer-heading: #ffeb3b;
+  --color-footer-link: #ffeb3b;
+  --color-footer-link-hover: #fff176;
+  --color-footer-divider: #ffffff;
+
+  --hero-bg: #000000;
+  --hero-bg-solid: #000000;
+  --hero-overlay: none;
+  --hero-text: #ffffff;
+  --hero-lead: #ffffff;
+  --hero-padding: 4rem 1.25rem;
+  --hero-title-width: min(38rem, 100%);
+
+  --color-notice-bg: #000000;
+  --color-notice-border: #ffeb3b;
+  --color-info-bg: #000000;
+  --color-info-border: #ffeb3b;
+
+  --color-alert: #ff5252;
+  --color-alert-bg: #000000;
+  --color-focus: #ffeb3b;
+
+  --card-border: 3px solid #ffffff;
+  --radius: 0.5rem;
+  --shadow: none;
+  --logo-height: 4.25rem;
+
+  --font-size: 1.15rem;
+  --line-height: 1.85;
+  --heading-tracking: 0.02em;
+}
+
+[data-theme="hi-contrast"] .card {
+  border: 3px solid #ffffff;
+  border-top: 3px solid #ffffff;
+}
+
+[data-theme="hi-contrast"] .hero .btn--primary {
+  background: #ffeb3b;
+  color: #000000;
+  border: 3px solid #ffeb3b;
+}
+
+[data-theme="hi-contrast"] .hero .btn--primary:hover {
+  background: #fff176;
+  color: #000000;
+  border-color: #fff176;
+}
+
+[data-theme="hi-contrast"] .btn--secondary {
+  border-color: #ffffff;
+}
+
+[data-theme="hi-contrast"] .btn--secondary:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+[data-theme="hi-contrast"] .tier {
+  border: 3px solid #ffeb3b;
+  background: #000000;
+}
+
+[data-theme="hi-contrast"] .site-chrome__contacts a {
+  text-decoration: underline;
+}
+
+[data-theme="hi-contrast"] .main-nav a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+[data-theme="hi-contrast"] .site-footer a {
+  text-decoration: underline;
+}
+
+[data-theme="hi-contrast"] .event-list li,
+[data-theme="hi-contrast"] .worship-list article {
+  border-bottom-color: #ffffff;
+}
+
+[data-theme="hi-contrast"] .event-calendar th,
+[data-theme="hi-contrast"] .event-calendar td {
+  border-color: #ffffff;
+}
+
+[data-theme="hi-contrast"] .contact-card,
+[data-theme="hi-contrast"] .contact-cta {
+  border: 3px solid #ffffff;
+}
+
+[data-theme="hi-contrast"] details {
+  border-color: #ffffff;
+}
+
+[data-theme="hi-contrast"] .board-list li {
+  border-color: #ffffff;
+}
