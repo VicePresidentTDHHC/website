@@ -96,7 +96,7 @@
 <div class="wpb_wrapper">
 <div class="wpb_text_column">
 <div class="wpb_wrapper">
-<p><strong>Andrea Short</strong>: Interpreter Coordinator<br /><strong>Email</strong>: <a href="mailto:coordinator@tdhhc.org">coordinator@tdhhc.org</a><br /><strong><span>903-617-6204 (voice)<br /></span></strong><strong><span>903-206-2210 (direct VP)</span></strong></p>
+<p><strong>Jordyn Babyak</strong>: Interpreter Coordinator<br /><strong>Email</strong>: <a href="mailto:coordinator@tdhhc.org">coordinator@tdhhc.org</a><br /><strong><span>903-617-6204 (voice)<br /></span></strong><strong><span>903-206-2210 (direct VP)</span></strong></p>
 </div>
 </div>
 </div>

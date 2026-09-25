@@ -177,8 +177,8 @@ News                          /news/                           [NEW — index]
 |---------------|----------|--------|
 | Request button | Top of page + anchor `#request` | New UX |
 | Cognito embed | Keep `data-key="RUV9PohCIkqzMCpW5J2vsQ"` form 1 | Live integration |
-| Andrea Short contact | **Move adjacent to form** — not buried below WPBakery markup | `interpreter-services` |
-| "Have more questions?" filler | **Remove.** Replace with: "Questions: Andrea Short" + VP, voice, email (see CONTENT-VOICE.md) | Rewrite — do not migrate |
+| Jordyn Babyak contact | **Move adjacent to form** — not buried below WPBakery markup | `interpreter-services` |
+| "Have more questions?" filler | **Remove.** Replace with: "Questions: Jordyn Babyak" + VP, voice, email (see CONTENT-VOICE.md) | Rewrite — do not migrate |
 | Signing women photo | Either meaningful alt ("Two women conversing in ASL") or remove | `signing_2-women-min.jpg` |
 | WPBakery block | **Do not migrate** | Discard |
 | ADA / rates copy | Keep substance; shorten intro; add rate table or PDF | `interpreter-services` — staff confirms rates |

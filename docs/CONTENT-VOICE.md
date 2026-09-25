@@ -53,7 +53,7 @@ Also avoid:
 | Situation | Instead of… | Write… |
 |-----------|-------------|--------|
 | Contact intro | "We're here for you!" | "Contact TDHHC by VP, voice, email, or the form below." |
-| More questions | "Have more questions? We're here to help." | "Questions: contact Andrea Short" + VP, voice, email links |
+| More questions | "Have more questions? We're here to help." | "Questions: contact Jordyn Babyak" + VP, voice, email links |
 | Services intro | "Curious about what kinds of services…" | "TDHHC provides interpreter services, advocacy, and community programs in East Texas." |
 | Home mission | "We hope you enjoy our helpful resources" | "TDHHC connects East Texas Deaf, Hard of Hearing, and DeafBlind communities to services, advocacy, and resources." |
 | Donate | "Life blood… generous donation… thank you once again" | State 501(c)(3) status, what donations fund, how to give — once, plainly |
@@ -113,7 +113,7 @@ Ready replacements for known site copy:
 
 **Interpreter services**
 - ~~Have more questions? Not a problem. We're here to help.~~
-- **Questions:** Andrea Short, Interpreter Coordinator — [VP] · [voice] · coordinator@tdhhc.org
+- **Questions:** Jordyn Babyak, Interpreter Coordinator — [VP] · [voice] · coordinator@tdhhc.org
 
 **Home — contact card**
 - ~~We look forward to helping you.~~

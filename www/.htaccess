@@ -1,2 +1,8 @@
 # Serve calendar feed with the correct MIME type (Outlook / Apple / Google)
 AddType text/calendar .ics
+
+# Display PDFs in the browser instead of forcing download (Chrome respects this)
+<FilesMatch "\.pdf$">
+  ForceType application/pdf
+  Header set Content-Disposition "inline"
+</FilesMatch>
