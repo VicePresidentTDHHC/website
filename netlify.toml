@@ -1,2 +1,8 @@
 [build]
   publish = "www"
+
+[[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    Content-Disposition = "inline"
+    Content-Type = "application/pdf"
