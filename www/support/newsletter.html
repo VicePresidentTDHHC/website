@@ -10,6 +10,7 @@
   <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="../assets/favicon.png">
   <script>(function(){var t=localStorage.getItem('tdhhc-theme');if(t==='hi-contrast')document.documentElement.setAttribute('data-theme','hi-contrast');})();</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -50,13 +51,10 @@
       <p>Read the current issue below, or download the PDF.</p>
       <div class="btn-row">
         <a class="btn btn--primary" href="../assets/newsletters/tdhhc-september-newsletter.pdf" download="TDHHC-September-newsletter.pdf">Download PDF</a>
-        <a class="btn btn--primary" href="../assets/newsletters/tdhhc-september-newsletter.pdf" target="_blank" rel="noopener">Open in new tab</a>
+        <a class="btn btn--primary" href="pdf-viewer.html?file=../assets/newsletters/tdhhc-september-newsletter.pdf" target="_blank" rel="noopener">Open in new tab</a>
       </div>
       <div class="newsletter-viewer">
-        <iframe
-          title="TDHHC September newsletter"
-          src="../assets/newsletters/tdhhc-september-newsletter.pdf"
-          loading="lazy"></iframe>
+        <div id="pdf-viewer"></div>
       </div>
       <p class="newsletter-viewer__fallback">If the preview does not load, <a href="../assets/newsletters/tdhhc-september-newsletter.pdf" download="TDHHC-September-newsletter.pdf">download the PDF</a>.</p>
     </section>
@@ -100,5 +98,56 @@
     </div>
   </footer>
   <script src="../js/main.js"></script>
+  <script>
+  (function() {
+    var viewer = document.getElementById('pdf-viewer');
+    if (!viewer) return;
+
+    var PDF_URL = '../assets/newsletters/tdhhc-september-newsletter.pdf';
+
+    function showFallback() {
+      viewer.innerHTML = '<p style="padding:2rem;text-align:center">The preview could not be loaded. <a href="' + PDF_URL + '" download="TDHHC-September-newsletter.pdf">Download the PDF</a> to read the newsletter.</p>';
+    }
+
+    function renderPDF() {
+      if (typeof window.pdfjsLib === 'undefined') { showFallback(); return; }
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+      var container = document.createElement('div');
+      container.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:1rem;padding:1rem;max-height:75vh;overflow:auto;';
+      viewer.appendChild(container);
+
+      var loadingTask = window.pdfjsLib.getDocument(PDF_URL);
+      loadingTask.promise.then(function(pdf) {
+        var totalPages = pdf.numPages;
+        var renderQueue = [];
+        for (var i = 1; i <= totalPages; i++) { renderQueue.push(i); }
+
+        function renderNext() {
+          if (renderQueue.length === 0) return;
+          var pageNum = renderQueue.shift();
+          pdf.getPage(pageNum).then(function(page) {
+            var containerWidth = viewer.clientWidth - 32;
+            var scale = containerWidth / page.getViewport({ scale: 1 }).width;
+            var viewport = page.getViewport({ scale: scale });
+            var canvas = document.createElement('canvas');
+            canvas.style.cssText = 'display:block;width:100%;height:auto;box-shadow:0 1px 4px rgba(0,0,0,0.15);border-radius:4px;';
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            container.appendChild(canvas);
+            page.render({ canvasContext: canvas.getContext('2d'), viewport: viewport }).promise.then(renderNext, showFallback);
+          }).catch(showFallback);
+        }
+        renderNext();
+      }).catch(showFallback);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', renderPDF);
+    } else {
+      renderPDF();
+    }
+  })();
+  </script>
 </body>
 </html>
