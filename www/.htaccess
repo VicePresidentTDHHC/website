@@ -1,6 +1,9 @@
 # Serve calendar feed with the correct MIME type (Outlook / Apple / Google)
 AddType text/calendar .ics
 
+# Ensure JS files are served with correct MIME type
+AddType application/javascript .js
+
 # Display PDFs in the browser instead of forcing download (Chrome respects this)
 <FilesMatch "\.pdf$">
   ForceType application/pdf

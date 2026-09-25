@@ -6,7 +6,7 @@
   <title>Newsletter PDF | TDHHC</title>
   <link rel="stylesheet" href="../css/main.css">
   <link rel="icon" href="../assets/favicon-teal.svg" type="image/svg+xml">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+  <script src="../assets/pdf.min.js"></script>
   <style>
     body { margin: 0; }
     #pdf-container {
@@ -55,7 +55,7 @@
 
     function renderPDF() {
       if (typeof window.pdfjsLib === 'undefined') { showFallback(); return; }
-      window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc = '../assets/pdf.worker.min.js';
 
       var container = document.getElementById('pdf-container');
 

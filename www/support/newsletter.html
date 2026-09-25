@@ -10,7 +10,7 @@
   <link rel="icon" href="../assets/favicon.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="../assets/favicon.png">
   <script>(function(){var t=localStorage.getItem('tdhhc-theme');if(t==='hi-contrast')document.documentElement.setAttribute('data-theme','hi-contrast');})();</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+  <script src="../assets/pdf.min.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -111,7 +111,7 @@
 
     function renderPDF() {
       if (typeof window.pdfjsLib === 'undefined') { showFallback(); return; }
-      window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc = '../assets/pdf.worker.min.js';
 
       var container = document.createElement('div');
       container.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:1rem;padding:1rem;max-height:75vh;overflow:auto;';
