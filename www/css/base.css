@@ -774,3 +774,201 @@ summary {
     display: none;
   }
 }
+
+/* ── KissFist Christmas banner (events page) ── */
+.kissfist-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  max-width: var(--max-width);
+  margin: 1.5rem auto;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #b71c1c 0%, #c62828 50%, #8b1a1a 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(183, 28, 28, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.kissfist-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 90% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.kissfist-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(183, 28, 28, 0.4);
+  color: #fff;
+}
+
+.kissfist-banner__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ffe566;
+  flex-basis: 100%;
+}
+
+.kissfist-banner__title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.kissfist-banner__desc {
+  font-size: 0.95rem;
+  opacity: 0.92;
+  flex: 1;
+  min-width: 12rem;
+}
+
+.kissfist-banner__cta {
+  font-weight: 700;
+  font-size: 1rem;
+  background: #ffe566;
+  color: #b71c1c;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.kissfist-banner:hover .kissfist-banner__cta {
+  background: #fff;
+}
+
+/* ── KissFist callout (home page, below hero) ── */
+.kissfist-callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, #b71c1c 0%, #c62828 50%, #8b1a1a 100%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0;
+  transition: transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.kissfist-callout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.kissfist-callout:hover {
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.kissfist-callout__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ffe566;
+  flex-basis: 100%;
+}
+
+.kissfist-callout__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.kissfist-callout__desc {
+  font-size: 0.9rem;
+  opacity: 0.92;
+  flex: 1;
+  min-width: 10rem;
+}
+
+.kissfist-callout__cta {
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: #ffe566;
+  color: #b71c1c;
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.kissfist-callout:hover .kissfist-callout__cta {
+  background: #fff;
+}
+
+/* ── High-contrast overrides ── */
+[data-theme="hi-contrast"] .kissfist-banner,
+[data-theme="hi-contrast"] .kissfist-callout {
+  background: #000;
+  border: 3px solid #ff5252;
+  box-shadow: none;
+}
+
+[data-theme="hi-contrast"] .kissfist-banner__eyebrow,
+[data-theme="hi-contrast"] .kissfist-callout__eyebrow {
+  color: #ff5252;
+}
+
+[data-theme="hi-contrast"] .kissfist-banner__cta,
+[data-theme="hi-contrast"] .kissfist-callout__cta {
+  background: #ff5252;
+  color: #000;
+  border: 2px solid #ff5252;
+}
+
+[data-theme="hi-contrast"] .kissfist-banner:hover,
+[data-theme="hi-contrast"] .kissfist-callout:hover {
+  border-color: #fff;
+}
+
+[data-theme="hi-contrast"] .kissfist-banner:hover .kissfist-banner__cta,
+[data-theme="hi-contrast"] .kissfist-callout:hover .kissfist-callout__cta {
+  background: #fff;
+  color: #000;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .kissfist-banner,
+  .kissfist-callout {
+    padding: 1.25rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .kissfist-banner__title,
+  .kissfist-callout__title {
+    font-size: 1.4rem;
+  }
+
+  .kissfist-banner__cta,
+  .kissfist-callout__cta {
+    align-self: stretch;
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+}
