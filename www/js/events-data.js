@@ -14,5 +14,17 @@ window.TDHHC_EVENTS = [
   { date: "2026-09-22", title: "Senior Health & Living Expo", detail: "Free admission at Brookshire Conference Center.", href: "services/events.html#senior-health-expo" },
   { date: "2026-09-25", title: "Deaf Ice Cream Social", detail: "7:00–10:00 PM at Marble Slab Creamery.", href: "services/events.html#ice-cream-social" },
   { date: "2026-09-29", title: "ASL Bingo Night", detail: "6:30 PM at TJC Apache Rooms. $10 entry.", href: "services/events.html#asl-bingo" },
-  { date: "2026-10-03", title: "\"Deaf Day\" — East Texas State Fair", detail: "At the East Texas State Fairgrounds.", href: "services/events.html#deaf-day-state-fair" }
+  { date: "2026-10-02", title: "Tyler Deaf Chat", detail: "6:00 PM at Pizza Ranch. Hosted by East Texas Deaf Association.", href: "services/events.html#oct-tyler-deaf-chat" },
+  { date: "2026-10-03", title: "\"Deaf Day\" — East Texas State Fair", detail: "10:00 AM–11:00 PM at the East Texas State Fairgrounds.", href: "services/events.html#deaf-day-state-fair" },
+  { date: "2026-10-08", title: "Deaf Seniors Luncheon", detail: "11:00 AM at Torchy's Taco. Free recreational dance activity at 10:00 & 11:00 AM.", href: "services/events.html#oct-deaf-seniors-luncheon" },
+  { date: "2026-10-09", title: "Longview Deaf Chat", detail: "6:00 PM at Dickie's BBQ. Hosted by East Texas Deaf Association.", href: "services/events.html#oct-longview-deaf-chat" },
+  { date: "2026-10-16", title: "Lindale Deaf Chat", detail: "6:00 PM at Jucy's. Hosted by East Texas Deaf Association.", href: "services/events.html#oct-lindale-deaf-chat" },
+  { date: "2026-10-20", title: "ASL Games (Longview)", detail: "6:00–9:00 PM at Three Suns Unlimited. Free to come and play.", href: "services/events.html#oct-asl-games" },
+  { date: "2026-11-06", title: "Tyler Deaf Chat", detail: "6:00 PM at Daiquiris. Hosted by East Texas Deaf Association.", href: "services/events.html#nov-tyler-deaf-chat" },
+  { date: "2026-11-07", title: "Deaf Friendsgiving", detail: "12:00 PM at CBTX Baxter Event Center, Nacogdoches.", href: "services/events.html#nov-friendsgiving" },
+  { date: "2026-11-12", title: "Deaf Seniors Luncheon & Workshop", detail: "11:00 AM lunch at Potpourri House; 1:00 PM workshop at TDHHC.", href: "services/events.html#nov-deaf-seniors-luncheon" },
+  { date: "2026-11-13", title: "Longview Deaf Chat", detail: "6:00 PM at Papacita's. Hosted by East Texas Deaf Association.", href: "services/events.html#nov-longview-deaf-chat" },
+  { date: "2026-11-14", title: "Deaf Santa's Gift Shop", detail: "11:00 AM–2:30 PM at TDHHC.", href: "services/events.html#nov-santa-gift-shop" },
+  { date: "2026-11-17", title: "ASL Games (Longview)", detail: "6:00–9:00 PM at Three Suns Unlimited. Free to come and play.", href: "services/events.html#nov-asl-games" },
+  { date: "2026-11-20", title: "Lindale Deaf Chat", detail: "6:00 PM at Wingstop. Hosted by East Texas Deaf Association.", href: "services/events.html#nov-lindale-deaf-chat" }
 ];
