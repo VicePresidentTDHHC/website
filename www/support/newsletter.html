@@ -47,16 +47,23 @@
     <p class="lead">Monthly updates on TDHHC events, programs, and community news.</p>
 
     <section class="newsletter-current" aria-labelledby="current-newsletter-heading">
-      <h2 id="current-newsletter-heading">September newsletter</h2>
+      <h2 id="current-newsletter-heading">November newsletter</h2>
       <p>Read the current issue below, or download the PDF.</p>
       <div class="btn-row">
-        <a class="btn btn--primary" href="../assets/newsletters/tdhhc-september-newsletter.pdf" download="TDHHC-September-newsletter.pdf">Download PDF</a>
-        <a class="btn btn--primary" href="pdf-viewer.html?file=../assets/newsletters/tdhhc-september-newsletter.pdf" target="_blank" rel="noopener">Open in new tab</a>
+        <a class="btn btn--primary" href="../assets/newsletters/tdhhc-november-newsletter.pdf" download="TDHHC-November-newsletter.pdf">Download November PDF</a>
+        <a class="btn btn--primary" href="pdf-viewer.html?file=../assets/newsletters/tdhhc-november-newsletter.pdf" target="_blank" rel="noopener">Open in new tab</a>
       </div>
       <div class="newsletter-viewer">
         <div id="pdf-viewer"></div>
       </div>
-      <p class="newsletter-viewer__fallback">If the preview does not load, <a href="../assets/newsletters/tdhhc-september-newsletter.pdf" download="TDHHC-September-newsletter.pdf">download the PDF</a>.</p>
+      <p class="newsletter-viewer__fallback">If the preview does not load, <a href="../assets/newsletters/tdhhc-november-newsletter.pdf" download="TDHHC-November-newsletter.pdf">download the PDF</a>.</p>
+    </section>
+
+    <section class="newsletter-archive" aria-labelledby="archive-heading">
+      <h2 id="archive-heading">Previous issues</h2>
+      <ul>
+        <li><a href="pdf-viewer.html?file=../assets/newsletters/tdhhc-october-newsletter.pdf" target="_blank" rel="noopener">October 2026 newsletter</a></li>
+      </ul>
     </section>
 
     <section class="newsletter-subscribe" aria-labelledby="subscribe-heading">
@@ -103,10 +110,10 @@
     var viewer = document.getElementById('pdf-viewer');
     if (!viewer) return;
 
-    var PDF_URL = '../assets/newsletters/tdhhc-september-newsletter.pdf';
+    var PDF_URL = '../assets/newsletters/tdhhc-november-newsletter.pdf';
 
     function showFallback() {
-      viewer.innerHTML = '<p style="padding:2rem;text-align:center">The preview could not be loaded. <a href="' + PDF_URL + '" download="TDHHC-September-newsletter.pdf">Download the PDF</a> to read the newsletter.</p>';
+      viewer.innerHTML = '<p style="padding:2rem;text-align:center">The preview could not be loaded. <a href="' + PDF_URL + '" download="TDHHC-November-newsletter.pdf">Download the PDF</a> to read the newsletter.</p>';
     }
 
     function renderPDF() {
